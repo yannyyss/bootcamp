@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'antd/dist/antd.css';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { BrowserRouter as Router } from 'react-router-dom'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+
+const WithRoute = () => (
+    <Router>
+        <App />
+    </Router>
+)
+
+ReactDOM.render(<WithRoute />, document.getElementById('root'));
 serviceWorker.unregister();
