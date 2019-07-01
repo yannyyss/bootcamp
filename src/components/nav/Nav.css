@@ -12,6 +12,7 @@
     font-family: Avenir;
     font-weight: bold;
     font-size: 18px;
+    z-index: 9999;
 
 }
 .line{
@@ -30,6 +31,7 @@
 }
 .pestanas p{
     margin: 0 20px;
+    cursor: pointer;
 }
 .btn-aply{
     width: 120px;
@@ -48,4 +50,10 @@
 .btn-aply:hover{
     background-color:#962f35;
 
+}
+.nav a{
+    color:white;
+}
+.nav a:hover{
+    color: #ca3e47;
 }

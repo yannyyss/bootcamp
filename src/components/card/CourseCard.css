@@ -56,15 +56,8 @@
 .autor-info span{
     color:#ca3e47;
 }
-
-.course-card:hover{
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transform: scale(1.1);
-
-}
 .price{
-    background-color:  #ca3e47;
+    background-color:#ca3e47;
     color:white;
     width: 50px;
     position: absolute;
@@ -72,4 +65,15 @@
     bottom: 0;
     padding: 1%;
     text-align: center;
+    opacity: 0;
+}
+
+.course-card:hover{
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: scale(1.1);
+
+}
+.course-card:hover .price{
+    opacity: 1;
 }

@@ -10,12 +10,20 @@ export const NavBarDisplay = () => {
                 <img src={logo} alt=""/>
             </Link>
             <div className="pestanas">
-                <p>Bootcamp</p>
-                <p>Cursos</p>
-                <p>Contacto</p>
+                <Link to="/bootcamp">
+                    <p>Bootcamp</p>
+                </Link>
+                <Link to="/courses">
+                    <p>Cursos</p>
+                </Link>
+                <Link to="/contacto">
+                    <p>Contacto</p>
+                </Link>
                 <button className="btn-aply">Aplicar</button>
                 <hr className="line"/>
-                <p>Login</p>
+                <Link to="/login">
+                    <p>Login</p>
+                </Link>
             </div>
         </div>
     );

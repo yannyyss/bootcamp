@@ -38,16 +38,16 @@ class Footer extends Component {
                 </div>
                 <div className="redes">
                     <h3>Síguenos</h3>
-                    <a href="https://www.facebook.com/fixterme/" target="_blank">
+                    <a href="https://www.facebook.com/fixterme/" target="blank">
                         <FontAwesome name="facebook"/>
                     </a>
-                    <a href="https://wa.me/5217714348038" target="_blank">
+                    <a href="https://wa.me/5217714348038" target="blank">
                         <FontAwesome name="whatsapp"/>
                     </a>
-                    <a href="https://www.youtube.com/channel/UC2cNZUym14-K-yGgOEAFh6g" target="_blank">
+                    <a href="https://www.youtube.com/channel/UC2cNZUym14-K-yGgOEAFh6g" target="blank">
                         <FontAwesome name="youtube"/>
                     </a>
-                    <a href="https://www.instagram.com/fixtergeek/?hl=es-la" target="_blank">
+                    <a href="https://www.instagram.com/fixtergeek/?hl=es-la" target="blank">
                         <FontAwesome name="instagram"/>
                     </a>
 

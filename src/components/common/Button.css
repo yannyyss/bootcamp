@@ -20,3 +20,27 @@
     background-color:#962f35;
 
 }
+
+.btn-apply{
+    width: 180px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #ca3e47;
+    text-transform: uppercase;
+    color: #ca3e47;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 1s ease;
+    font-size: 18px;
+    font-family: Avenir;
+}
+.btn-apply span{
+    margin-right: 5px;
+    font-size: 24px;
+}
+
+.btn-apply:hover{
+    background-color:#ca3e47;
+    color:white;
+
+}

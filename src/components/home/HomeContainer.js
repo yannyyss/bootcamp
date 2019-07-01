@@ -4,7 +4,6 @@ import Button from "../common/Button";
 import uno from "../../assets/Group.svg"
 import {CourseCard} from "../card/CourseCard";
 import { Carousel } from 'antd';
-import Footer from "../footer/Footer";
 
 let react = require("../../assets/react.png")
 let vue = require("../../assets/vue.png")
@@ -183,7 +182,7 @@ class HomeContainer extends Component {
                         <button>Enviar</button>
                     </div>
                 </section>
-                <Footer/>
+
             </section>
         )
     }

@@ -1,0 +1,155 @@
+.intro-bootcamp{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.bootcamp-descript{
+    width: 400px;
+    flex-grow: 1;
+    background-image: url('../../assets/19366.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+    box-sizing: border-box;
+    margin-top: 70px;
+
+}
+.bootcamp-descript p{
+    font-size: 18px;
+    margin-top: -20px;
+}
+.bootcamp-img{
+    width: 500px;
+    height: 100%;
+    flex-grow: 2;
+    background-image: url('https://scontent-qro1-1.xx.fbcdn.net/v/t1.0-9/48328461_1923771327718246_3353577118314266624_o.jpg?_nc_cat=108&_nc_eui2=AeECWNlUIas3IuDnQgQHUxrYd8ZT4mc-3iIpStd0oNn0QZzJmHv8jj_dVKGGYkbQ2gkOc43b_ZhroqXNE02znMAYWRRsKpFP8oA3RI5ktnhWrw&_nc_oc=AQmYJ9baL1RZFVhj-aaE1qONepseoYf5BLt-YdncPYrCH9xKa66xg_Din7fAvvPFMnY&_nc_ht=scontent-qro1-1.xx&oh=48ba93b6e2a6bea1ebeb949dbca943ce&oe=5DC07DFA');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.summary{
+    padding: 50px 5%;
+    box-sizing: border-box;
+    height: 600px;
+}
+.summary p{
+    font-size: 16px;
+}
+.summary h4{
+    font-size: 18px;
+}
+.ant-tabs-nav .ant-tabs-tab-active{
+    color:#ca3e47 !important;
+}
+.ant-tabs .ant-tabs-ink-bar{
+    background-color: #ca3e47;
+}
+.ant-tabs-nav .ant-tabs-tab:hover{
+    color:#ca3e47 !important;
+}
+
+.textos{
+    color:#525252;
+    font-size: 18px;
+}
+.summary span{
+    color:#ca3e47;
+}
+
+.how{
+    width: 100%;
+    padding: 50px 10%;
+    background-color: #f5f5f5;
+}
+.box-steps{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.steps{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.step-img{
+    height: 150px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    margin: 0 20px 0 0;
+}
+.circle-white{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    left: 175px;
+    top:10px
+}
+.step-descript{
+    width: 200px;
+    margin: 0 0 0 20px;
+}
+.invite{
+    width: 100%;
+    padding: 50px 10%;
+    text-align: center;
+}
+.apply{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+.apply-box{
+    width: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding: 2% 3% 2% 3%;
+    background-color: white;
+    margin-top: 70px;
+    height: 400px;
+}
+.ant-steps-item-process .ant-steps-item-icon{
+    background: #ca3e47 !important;
+}
+.ant-steps-item-process .ant-steps-item-icon, .ant-steps-item-finish .ant-steps-item-icon{
+    border-color: #ca3e47 !important;
+}
+.ant-btn-primary{
+    background-color: #ca3e47 !important;
+    border-color: #ca3e47 !important;
+}
+.ant-steps-item-icon > .ant-steps-icon{
+    color: #ca3e47 !important;
+}
+.ant-steps-item-finish > .ant-steps-item-content > .ant-steps-item-title::after{
+    background-color: #ca3e47 !important;
+
+}
+
+.ant-btn:hover, .ant-btn:focus{
+    color: #ccc !important;
+    border-color: #ca3e47 !important;
+
+}
+.step{
+    margin: 30px 0;
+}
+.ant-input:hover{
+    border-color: #ca3e47 !important;
+
+}
+.pay-fl{
+    display: flex;
+    justify-content: space-between;
+}
+.pay-fl label{
+    width: 30%;
+}
