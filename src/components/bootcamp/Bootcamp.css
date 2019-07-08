@@ -8,7 +8,7 @@
 .bootcamp-descript{
     width: 400px;
     flex-grow: 1;
-    background-image: url('../../assets/19366.jpg');
+    background-image: url('../../assets/banner_section_Mesa de trabajo 1 copia.png');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -89,7 +89,13 @@
     border-radius: 50%;
     position: relative;
     left: 175px;
-    top:10px
+    top:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle-white img{
+    width: 60%;
 }
 .step-descript{
     width: 200px;

@@ -9,38 +9,23 @@ export const StepDos = () => {
         <div className="step">
             <Form.Item>
                 <Input
-                    placeholder="Titular de la tarjeta"
+                    type="text"
+                    placeholder="Nombre"
                 />
             </Form.Item>
             <Form.Item>
 
                 <Input
-                    placeholder="Número de tarjeta"
+                    type="text"
+                    placeholder="Apellidos"
                 />
             </Form.Item>
-            <div className="pay-fl">
-                <label htmlFor="">
-                    Fecha de expiración
-                    <Input
-                    placeholder="Fecha de expiración"
+            <Form.Item>
+                <Input
+                    type="email"
+                    placeholder="Email"
                 />
-                </label>
-                <label htmlFor="">
-                    Código de seguridad
-                    <Input
-                        placeholder="VVV"
-                    />
-                </label>
-                <label htmlFor="">
-                    Fecha de expiración
-                    <Input
-                        type="select"
-                        placeholder="Fecha de expiración"
-                    />
-                </label>
-
-
-            </div>
+            </Form.Item>
 
         </div>
     );

@@ -19,7 +19,9 @@ export const NavBarDisplay = () => {
                 <Link to="/contacto">
                     <p>Contacto</p>
                 </Link>
-                <button className="btn-aply">Aplicar</button>
+                <Link to="/apply">
+                    <button className="btn-aply">Aplicar</button>
+                </Link>
                 <hr className="line"/>
                 <Link to="/login">
                     <p>Login</p>

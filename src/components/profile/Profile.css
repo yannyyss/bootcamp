@@ -1,0 +1,77 @@
+.perfil{
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+}
+.user-portada{
+    width: 100%;
+    height: 240px;
+    background-image: url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/65791971_2234393436656032_6943337700871110656_o.jpg?_nc_cat=104&_nc_oc=AQl4rdgtYxCixZPL8Dez5o16SVetpiR605p8gOBawEEXoznzenYtWKyi6S6FVvQQ7QE&_nc_ht=scontent.fmex6-1.fna&oh=066da9d894d58bd1ea5da06449064baf&oe=5DB7D114");
+    background-size: cover;
+    background-position: center;
+}
+.user-photo{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: white;
+    background-position: center;
+    background-size: contain;
+    transition: all 1s ease;
+    cursor: help;
+}
+.user-photo:hover{
+    transform: scale(1.2);
+}
+
+.fl{
+    display: flex;
+    justify-content: center;
+    margin-top: -80px;
+
+}
+.user-descript{
+    text-align: center;
+    padding: 20px 0;
+}
+.user-descript h3{
+    font-size: 18px;
+}
+.user-descript p{
+    font-size: 16px;
+}
+.contenido{
+    width: 80%;
+    margin:0 auto;
+    font-size: 16px;
+}
+.ant-tabs-nav-container{
+    font-size: 16px !important;
+}
+
+
+/*CURSOS*/
+.user-courses{
+    padding: 30px 0;
+    min-height: 520px;
+}
+
+.box-c{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.box-c p{
+  font-size: 16px;
+}
+.box-c img{
+    width: 70%;
+    margin: 20px auto;
+}
+
+@media(max-width: 435px) {
+    .ant-tabs-nav-container{
+        font-size: 14px !important;
+    }
+}

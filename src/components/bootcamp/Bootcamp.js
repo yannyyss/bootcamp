@@ -4,7 +4,10 @@ import "./Bootcamp.css"
 import { Tabs, Select } from 'antd';
 import ButtonWhite from "../common/ButtonWhite"
 import {Link} from "react-router-dom";
-
+import step1 from "../../assets/iconos_100x100_Mesa de trabajo 1.png"
+import step2 from "../../assets/iconos_100x100-02.png"
+import step3 from "../../assets/iconos_100x100-03.png"
+import step4 from "../../assets/iconos_100x100-04.png"
 
 const { TabPane } = Tabs;
 const { Option } = Select;
@@ -95,7 +98,7 @@ class Bootcamp extends Component {
                         <div className="steps">
                             <div className="step-img">
                                 <div className="circle-white">
-
+                                    <img src={step1} alt=""/>
                                 </div>
                             </div>
                             <div className="step-descript">
@@ -106,7 +109,7 @@ class Bootcamp extends Component {
                         <div className="steps">
                             <div className="step-img">
                                 <div className="circle-white">
-
+                                    <img src={step2} alt=""/>
                                 </div>
                             </div>
                             <div className="step-descript">
@@ -117,7 +120,7 @@ class Bootcamp extends Component {
                         <div className="steps">
                             <div className="step-img">
                                 <div className="circle-white">
-
+                                    <img src={step3} alt=""/>
                                 </div>
                             </div>
                             <div className="step-descript">
@@ -128,7 +131,7 @@ class Bootcamp extends Component {
                         <div className="steps">
                             <div className="step-img">
                                 <div className="circle-white">
-
+                                    <img src={step4} alt=""/>
                                 </div>
                             </div>
                             <div className="step-descript">

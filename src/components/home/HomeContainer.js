@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import "./Home.css"
 import Button from "../common/Button";
-import uno from "../../assets/Group.svg"
 import {CourseCard} from "../card/CourseCard";
 import { Carousel } from 'antd';
+import uno from "../../assets/iconos_web_Mesa de trabajo 1 (1).png"
+import dos from "../../assets/iconos_web-02 (1).png"
+import tres from "../../assets/iconos_web-03 (1).png"
+import cuatro from "../../assets/iconos_web-04 (1).png"
+
+
 
 let react = require("../../assets/react.png")
 let vue = require("../../assets/vue.png")
@@ -101,26 +106,26 @@ class HomeContainer extends Component {
                         <div className="card-beneficios">
                             <img src={uno} alt=""/>
                             <div className="beneficios">
-                                <h3>Incíbete</h3>
+                                <h3>Inscíbete</h3>
                                 <p>Asiste a un curso y aprende nuevas tecnologías.</p>
                             </div>
                         </div>
                         <div className="card-beneficios">
-                            <img src={uno} alt=""/>
+                            <img src={dos} alt=""/>
                             <div className="beneficios">
                                 <h3>Incíbete</h3>
                                 <p>Asiste a un curso y aprende nuevas tecnologías.</p>
                             </div>
                         </div>
                         <div className="card-beneficios">
-                            <img src={uno} alt=""/>
+                            <img src={tres} alt=""/>
                             <div className="beneficios">
                                 <h3>Incíbete</h3>
                                 <p>Asiste a un curso y aprende nuevas tecnologías.</p>
                             </div>
                         </div>
                         <div className="card-beneficios">
-                            <img src={uno} alt=""/>
+                            <img src={cuatro} alt=""/>
                             <div className="beneficios">
                                 <h3>Incíbete</h3>
                                 <p>Asiste a un curso y aprende nuevas tecnologías.</p>

@@ -44,3 +44,20 @@
     color:white;
 
 }
+.btn-user{
+    background-color: #5b5764;
+    width: 180px;
+    height: 40px;
+    border: 1px solid #5b5764;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 1s ease;
+    font-size: 16px;
+    font-family: Avenir;
+}
+
+.btn-user:hover{
+    background-color: #45424c;
+}

@@ -11,6 +11,9 @@
     font-family: Avenir;
 
 }
+.course-card a, .course-card:hover a{
+    color:inherit;
+}
 .course-card hr{
     background-color: #cccccc;
     height: 1px;

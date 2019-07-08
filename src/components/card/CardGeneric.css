@@ -1,0 +1,34 @@
+.card-video{
+    width: 300px;
+    height: 200px;
+    border: 4px;
+    background: #fff;
+    color: #666;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+}
+#image-video{
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.back{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    display: flex;
+    align-items: flex-end;
+}
+#etiqueta-video{
+    width: 100%;
+    height: 30px;
+    font-size: 12px;
+    background-color: rgba(0,0,0,.6);
+    padding-left: 4px;
+    display: flex;
+    align-items: center;
+}
+#etiqueta-video h3{
+    color:white;
+    font-family: Avenir;
+    margin: 0;
+}

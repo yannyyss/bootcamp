@@ -8,7 +8,7 @@
 .courses-descript{
     width: 400px;
     flex-grow: 1;
-    background-image: url('../../assets/19366.jpg');
+    background-image: url('../../assets/banner_section_Mesa de trabajo 1 copia.png');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -39,4 +39,61 @@
 .catalogo{
     padding: 50px 10%;
     box-sizing: border-box;
+}
+
+
+/*DETAIL COURSE*/
+.flex{
+    display: flex;
+    padding: 120px 10% 30px 10%;
+    justify-content: space-around;
+    align-items: center;
+}
+.detail-descript{
+    width: 500px;
+    flex-grow: 1;
+}
+.detail-descript h2{
+    font-size: 36px;
+}
+.detail-descript p{
+    font-size: 18px;
+}
+.detail-badge{
+    width: 450px;
+    flex-grow: 1;
+    text-align: right;
+}
+.detail-badge img{
+    width: 300px;
+}
+.detail-author{
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+.detail-author h4{
+    margin-left: 10px;
+    color:#696969;
+    font-size: 16px;
+}
+.divider{
+    width: 80%;
+    margin: 0 auto;
+    height: 1px;
+    border: none;
+    background-color:#a7a7a7 ;
+    opacity: .2;
+}
+.box-detail{
+    padding: 30px 10%;
+}
+.box-detail h2{
+    font-size: 24px;
+}
+#box-videos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px;
 }

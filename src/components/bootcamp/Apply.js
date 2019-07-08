@@ -11,15 +11,15 @@ const { Step } = Steps;
 
 const steps = [
     {
-        title: 'Nombre',
+        title: 'Summary',
         content: <StepUno/>,
     },
     {
-        title: 'Pago',
+        title: 'Datos',
         content: <StepDos/>,
     },
     {
-        title: 'Fin',
+        title: 'Confirmación',
         content: <StepTres/>,
     },
 ];
@@ -59,16 +59,16 @@ class Apply extends Component {
                             <div className="steps-action">
                                 {current > 0 && (
                                     <Button style={{ marginLeft: 8 }} onClick={() => this.prev()}>
-                                        Previous
+                                        Anterior
                                     </Button>
                                 )}{current < steps.length - 1 && (
                                     <Button type="primary" onClick={() => this.next()}>
-                                        Next
+                                        Siguiente
                                     </Button>
                                 )}
                                 {current === steps.length - 1 && (
                                     <Button type="primary" onClick={() => message.success('Processing complete!')}>
-                                        Done
+                                        Confirmar
                                     </Button>
                                 )}
 

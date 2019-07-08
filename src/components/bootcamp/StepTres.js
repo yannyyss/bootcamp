@@ -9,20 +9,38 @@ export const StepTres = () => {
         <div className="step">
             <Form.Item>
                 <Input
-                    placeholder="Nombre"
+                    placeholder="Titular de la tarjeta"
                 />
             </Form.Item>
             <Form.Item>
 
                 <Input
-                    placeholder="Apellidos"
+                    placeholder="Número de tarjeta"
                 />
             </Form.Item>
-            <Form.Item>
-                <Input
-                    placeholder="Email"
-                />
-            </Form.Item>
+            <div className="pay-fl">
+                <label htmlFor="">
+                    Fecha de expiración
+                    <Input
+                        placeholder="Fecha de expiración"
+                    />
+                </label>
+                <label htmlFor="">
+                    Código de seguridad
+                    <Input
+                        placeholder="VVV"
+                    />
+                </label>
+                <label htmlFor="">
+                    Fecha de expiración
+                    <Input
+                        type="select"
+                        placeholder="Fecha de expiración"
+                    />
+                </label>
+
+
+            </div>
 
         </div>
     );
