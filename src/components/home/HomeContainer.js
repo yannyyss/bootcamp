@@ -7,7 +7,7 @@ import uno from "../../assets/iconos_web_Mesa de trabajo 1 (1).png"
 import dos from "../../assets/iconos_web-02 (1).png"
 import tres from "../../assets/iconos_web-03 (1).png"
 import cuatro from "../../assets/iconos_web-04 (1).png"
-
+import {Link} from "react-router-dom";
 
 
 let react = require("../../assets/react.png")
@@ -68,11 +68,13 @@ class HomeContainer extends Component {
                 <section className="slide">
                     <div className="cover">
                         <div className="slogan">
-                            <h2>Learn the best JavaScript tools and frameworks from industry pros.</h2>
-                            <p>Video tutorials for badass web developers.
+                            <h2>Aprende las <strong>herramientas</strong> y <strong>frameworks</strong> que usan los profesionales de la industria</h2>
+                            <p>Cursos, tutoriales, botocamps
                             </p>
                             <br/>
-                            <Button ico=">_" text=" Explorar"/>
+                            <Link to="/courses">
+                                <Button ico=">_" text=" Explorar"/>
+                            </Link>
                         </div>
                     </div>
                 </section>
@@ -91,44 +93,51 @@ class HomeContainer extends Component {
 
                     </div>
                     <div className="descript">
-                        <h2>La Plataforma para aprender </h2>
-                        <p>En cualquier momento y en cualquier lugar. Aprende sin remordimientos con nuestra garantía de reembolso de 30 días.</p>
-                        <p>En cualquier momento y en cualquier lugar. Aprende sin remordimientos con nuestra garantía de reembolso de 30 días.</p>
-                        <p>En cualquier momento y en cualquier lugar. Aprende sin remordimientos con nuestra garantía de reembolso de 30 días.</p>
-                        <p>En cualquier momento y en cualquier lugar. Aprende sin remordimientos con nuestra garantía de reembolso de 30 días.</p>
+                        <h2>La plataforma para aprender </h2>
+                        <p>
+                            La tecnología se mueve tan rápido, que en ocasiones, a pesar de la pasión u curiosidad que sientes por ella, es difícil aprender o actualizarse debido a la gran cantidad de información que encontramos en la web o en libros, y a lo dispersa que esta información se encuentra.
+
+                        </p>
+                        <p>
+                            Es por eso que FixterGeek, es una plataforma única en donde encontraras cursos, ejercicios, artículos, libros y eventos sobre tecnología.
+                        </p>
+                        <p>
+                            Si eres un apasionado del código, los bugs y el localhost, estas en el lugar correcto.</p>
                         <br/>
-                        <Button ico="</>" text=" Iniciar"/>
+                        <Link to="/courses">
+                            <Button ico="</>" text=" Iniciar"/>
+                        </Link>
                     </div>
                 </section>
                 <section className="why">
-                    <h2>Por qué aprender ? </h2>
+                    <h2>¿Por qué aprender en Fixter? </h2>
                     <div className="box-why">
                         <div className="card-beneficios">
-                            <img src={uno} alt=""/>
+                            <img src={cuatro} alt=""/>
                             <div className="beneficios">
-                                <h3>Inscíbete</h3>
-                                <p>Asiste a un curso y aprende nuevas tecnologías.</p>
-                            </div>
-                        </div>
-                        <div className="card-beneficios">
-                            <img src={dos} alt=""/>
-                            <div className="beneficios">
-                                <h3>Incíbete</h3>
-                                <p>Asiste a un curso y aprende nuevas tecnologías.</p>
+                                <h3>Diversidad</h3>
+                                <p>Explora nuestros cursos y bootcamps, y elige el que más te interese.</p>
                             </div>
                         </div>
                         <div className="card-beneficios">
                             <img src={tres} alt=""/>
                             <div className="beneficios">
-                                <h3>Incíbete</h3>
-                                <p>Asiste a un curso y aprende nuevas tecnologías.</p>
+                                <h3>Práctica</h3>
+                                <p>Toma cada curso a tu ritmo y a tu tiempo. Están siempre disponibles.</p>
                             </div>
                         </div>
                         <div className="card-beneficios">
-                            <img src={cuatro} alt=""/>
+                            <img src={uno} alt=""/>
                             <div className="beneficios">
-                                <h3>Incíbete</h3>
-                                <p>Asiste a un curso y aprende nuevas tecnologías.</p>
+                                <h3>Asesoría</h3>
+                                <p>Ten asesorías sobre el curso directamente de nuestros instructores.</p>
+                            </div>
+                        </div>
+                        <div className="card-beneficios">
+                            <img src={dos} alt=""/>
+                            <div className="beneficios">
+                                <h3>Certificado</h3>
+                                <p>Recibirás un diploma y un pack de stickers como recompensa al terminar.</p>
                             </div>
                         </div>
                     </div>
@@ -142,7 +151,7 @@ class HomeContainer extends Component {
                     </div>
                 </section>
                 <section className="testimonios">
-                    <h2 className="subtitulos">Conoce a nuestros alumnos</h2>
+                    <h2 className="subtitulos">Conoce a nuestros ex-alumnos</h2>
                     <div>
                         <Carousel afterChange={this.onChange} autoplay>
                             <div className="box-comment">
@@ -179,7 +188,7 @@ class HomeContainer extends Component {
                     </div>
                 </section>
                 <section className="newsletter">
-                    <h2 > Join our mailing list to stay up-to-date on upcoming courses and events.
+                    <h2 >¿Quieres mantenerte al día sobre los próximos cursos y eventos? <br/> Inscríbete a nuestro newsletter
                     </h2>
                     <br/>
                     <div>

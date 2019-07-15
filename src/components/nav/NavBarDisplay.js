@@ -12,12 +12,15 @@ export const NavBarDisplay = () => {
             <div className="pestanas">
                 <Link to="/bootcamp">
                     <p>Bootcamp</p>
+                    <hr className="red-line"/>
                 </Link>
                 <Link to="/courses">
                     <p>Cursos</p>
+                    <hr className="red-line"/>
                 </Link>
                 <Link to="/contacto">
                     <p>Contacto</p>
+                    <hr className="red-line"/>
                 </Link>
                 <Link to="/apply">
                     <button className="btn-aply">Aplicar</button>
@@ -25,6 +28,7 @@ export const NavBarDisplay = () => {
                 <hr className="line"/>
                 <Link to="/login">
                     <p>Login</p>
+                    <hr className="red-line"/>
                 </Link>
             </div>
         </div>

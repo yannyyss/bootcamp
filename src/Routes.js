@@ -9,6 +9,7 @@ import Registro from "./components/login/Registro";
 import Apply from "./components/bootcamp/Apply";
 import ProfileContainer from "./components/profile/ProfileContainer";
 import {CoursesDetail} from "./components/courses/CoursesDetail";
+import {BootcampDetail} from "./components/bootcamp/BootcampDetail";
 
 
 export const Router = () => (
@@ -16,7 +17,8 @@ export const Router = () => (
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/courses" component={Courses}/>
         <Route path="/courses/detail" component={CoursesDetail}/>
-        <Route path="/bootcamp" component={Bootcamp}/>
+        <Route exact path="/bootcamp" component={Bootcamp}/>
+        <Route path="/bootcamp/detail" component={BootcampDetail}/>
         <Route path="/contacto" component={Contacto}/>
         <Route path="/login" component={LoginContainer}/>
         <Route path="/registro" component={Registro}/>

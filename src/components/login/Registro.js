@@ -29,7 +29,7 @@ class Registro extends Component {
                                 <Input
                                     prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                                     type="password"
-                                    placeholder="Contrasena"
+                                    placeholder="Contraseña"
                                 />
                             </Form.Item>
                             <Form.Item>
@@ -37,9 +37,10 @@ class Registro extends Component {
                                 <Input
                                     prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                                     type="password"
-                                    placeholder="Repite la contrasena"
+                                    placeholder="Repite la contraseña"
                                 />
                             </Form.Item>
+                            <br/>
                             <Form.Item style={{textAlign:"center"}}>
 
                                 <div>

@@ -17,7 +17,7 @@ class Contacto extends Component {
                             width={500} height={450} frameBorder={0} style={{border:"0"}} allowFullScreen="true" ></iframe>
                     </div>
                     <div className="contact">
-                        <p> <strong style={{fontSize:"18px"}}>¿Quieres ponerte en contacto con nosotros?</strong> <br/> Completa el formulario y nos pondremos en contacto contigo lo antes posible</p>
+                        <p> <strong style={{fontSize:"18px"}}>¿Quieres ponerte en contacto con nosotros?</strong> <br/> Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
                         <input placeholder="Nombre" type="text" required={true}/>
                         <input placeholder="Email" type="text" required={true}/>
                         <input placeholder="Teléfono" type="number"/>

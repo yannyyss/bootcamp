@@ -37,3 +37,14 @@
 .redes a:hover{
     color: white;
 }
+
+@media (max-width: 435px) {
+    .box-one{
+        display: none;
+    }
+    .redes{
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+}

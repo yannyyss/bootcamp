@@ -23,8 +23,13 @@ class Bootcamp extends Component {
                     <div className="bootcamp-descript">
                         <div>
                             <h2 style={{textAlign:"left"}} className="subtitulos">Online Bootcamp</h2>
-                            <p>Programming is a critical skill in today’s economy, and there is a shortage of qualified developers. Whether you’re new to coding, adding more skills, or advancing your career, 10 hours a week will prepare you for your ideal developer job.</p>
-                            <p>19 de Agosto | 12:00 pm </p>
+                            <p>
+                                Si eres nuevo en programación, agrega este skill a tu carrera y preparate para impulsar tu carrera. <br/>
+                                Aprende los
+                                fundamentos necesarios para abordar el desarrollo de software web cómo un profesional.
+                            </p>
+                            <br/>
+                            <p>23 de Octubre | 12:00 pm </p>
                             <br/>
                             <Link to="/apply">
                                 <Button ico="{ }" text="Inscribirme"/>
@@ -44,12 +49,27 @@ class Bootcamp extends Component {
                     <div>
                         <Tabs tabPosition="left">
                             <TabPane tab="Semana 0" key="1">
-                                <p>En la Semana 0 aprenderás como funciona un bootcamp online, instalaremos todas las herramientas que utilizaremos
-                                    durante el curso.</p>
+                                <p>
+                                    Con este <strong>Bootcamp Online</strong>, conocerás los fundamentos necesarios para abordar el
+                                     <strong> desarrollo de software </strong>
+                                   web cómo un profesional, entenderás cuales son las <strong>herramientas </strong>
+                                    que se usan para crear páginas web, experimentarás también con las tecnologías que nos
+                                    permiten tener una <strong>estructura cliente - servidor </strong> que te permitirá crear <strong>aplicaciones web.</strong>   </p>
+                                    <br/>
+                                    <p>
+                                    Al finalizar este Bootcamp Online, serás capaz de crear aplicaciones web por tu cuenta
+                                    y estarás listo para dar el siguiente paso hacia un fraework frontend.
+                                    </p>
+                                    <br/>
+                                    <p>
+                                    En la Semana 0 aprenderás como funciona un bootcamp online, instalaremos todas las herramientas que utilizaremos
+                                    durante el curso.
+                            </p>
+
 
                             </TabPane>
                             <TabPane tab="Semana 1" key="2">
-                                <h4>  En la Semana 1 "Introducción al Desarrollo Web:</h4>
+                                <h4>  En la Semana 1 | Introducción al Desarrollo Web :</h4>
                                 <br/>
                                 <p><span>&bull;</span> Aprende las bases del desarrollo web</p>
                                 <p><span>&bull;</span> Aprende a utilizar y customizar nuestro editor de código</p>
@@ -59,7 +79,7 @@ class Bootcamp extends Component {
                                 <p><span>&bull;</span> Crea tu mini-bio con HTML5</p>
                             </TabPane>
                             <TabPane tab="Semana 2" key="3">
-                                <h4>  En la Semana 2 "HTML y CSS":</h4>
+                                <h4>  En la Semana 2 | HTML y CSS :</h4>
                                 <br/>
                                 <p><span>&bull;</span> Aprende como aplicar las propiedades de CSS</p>
                                 <p><span>&bull;</span> Aprende los tipos de selectores</p>
@@ -69,7 +89,7 @@ class Bootcamp extends Component {
 
                             </TabPane>
                             <TabPane tab="Semana 3" key="4">
-                                <h4> En la Semana 3 "JavaScript":</h4>
+                                <h4> En la Semana 3 | JavaScript :</h4>
                                 <br/>
                                 <p><span>&bull;</span> Aprende cómo manipular el DOM</p>
                                 <p><span>&bull;</span> Aprende qué son los nodos</p>
@@ -79,13 +99,13 @@ class Bootcamp extends Component {
 
                             </TabPane>
                             <TabPane tab="Semana 4" key="5">
-                                <h4> En la Semana 4 "Deployment":</h4>
+                                <h4> En la Semana 4 | Deployment :</h4>
                                 <br/>
-                                <p><span>&bull;</span> Cómo servir una página web?</p>
+                                <p><span>&bull;</span> ¿Cómo servir una página web?</p>
                                 <p><span>&bull;</span> Servidor Local</p>
                                 <p><span>&bull;</span> Aprende a comprimir archivos con WebPack</p>
                                 <p><span>&bull;</span> Pública tu videojuego</p>
-                                <p><span>&bull;</span> Qué sigue?t</p>
+                                <p><span>&bull;</span> ¿Qué sigue?</p>
                                 <p><span>&bull;</span> Exámen final</p>
 
                             </TabPane>
@@ -93,7 +113,7 @@ class Bootcamp extends Component {
                     </div>
                 </div>
                 <div className="how">
-                    <h2 className="subtitulos">Cómo funciona un bootcamp online?</h2>
+                    <h2 className="subtitulos">¿Cómo funciona un Bootcamp Online?</h2>
                     <div className="box-steps">
                         <div className="steps">
                             <div className="step-img">
@@ -102,8 +122,12 @@ class Bootcamp extends Component {
                                 </div>
                             </div>
                             <div className="step-descript">
-                                <h3>With real world projects</h3>
-                                <p>Inscríbete al bootcamp antes del día</p>
+                                <h3>Inscríbete</h3>
+                                <p>Inscríbete al bootcamp antes del día 23 de Octubre.
+
+                                    Y estudia la guía que aparecerá
+                                    en tu perfil.
+                                </p>
                             </div>
                         </div>
                         <div className="steps">
@@ -113,19 +137,8 @@ class Bootcamp extends Component {
                                 </div>
                             </div>
                             <div className="step-descript">
-                                <h3>With real world projects</h3>
-                                <p>Inscríbete al bootcamp antes del día</p>
-                            </div>
-                        </div>
-                        <div className="steps">
-                            <div className="step-img">
-                                <div className="circle-white">
-                                    <img src={step3} alt=""/>
-                                </div>
-                            </div>
-                            <div className="step-descript">
-                                <h3>With real world projects</h3>
-                                <p>Inscríbete al bootcamp antes del día</p>
+                                <h3>Aprende</h3>
+                                <p>Termina cada lección en video y sube tus tareas. Deebes completar cada módulo dentro de la semana correspondiente.</p>
                             </div>
                         </div>
                         <div className="steps">
@@ -135,20 +148,36 @@ class Bootcamp extends Component {
                                 </div>
                             </div>
                             <div className="step-descript">
-                                <h3>With real world projects</h3>
-                                <p>Inscríbete al bootcamp antes del día</p>
+                                <h3>Asesoría</h3>
+                                <p>¿Tienes dudas sobre alguna lección? Podrás recibir asesoría de nuestros mentores.</p>
+                            </div>
+                        </div>
+                        <div className="steps">
+                            <div className="step-img">
+                                <div className="circle-white">
+                                    <img src={step3} alt=""/>
+                                </div>
+                            </div>
+                            <div className="step-descript">
+                                <h3>Exámen final</h3>
+                                <p>Para probar que has puesto atención  en cada lección, te haremos un breve exámen para obtener tu diploma y un
+                                suculento pack de stickers.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="invite">
-                    <h2 className="subtitulos" style={{marginBottom:"20px"}}>Quieres completar tu aprendizaje?</h2>
+                    <h2 className="subtitulos" style={{marginBottom:"20px"}}>¿Quieres completar tu aprendizaje?</h2>
 
                     <p>Explora nuestro catálogo de cursos en línea, y aprende a utilziar las herramientas más utilziadas del
-                        desarrollo web.</p>
-                    <p>Explora nuestro catálogo de cursos en línea, y aprende a utilziar las herramientas más utilziadas del
-                        desarrollo web Explora nuestro catálogo de cursos en línea, y aprende a utilziar las herramientas más utilziadas del
-                        desarrollo web.</p>
+                        desarrollo.</p>
+                    <p>
+                        Encuentra cursos actualizados y concretos de las tecnologías más populares para el desarrollo de aplicaciones
+                        web y móviles. Aprende con los mejores profesionales y forma parte
+                        de nuestra comunidad.
+
+                    </p>
                     <br/>
                     <ButtonWhite ico="#" text="EXPLORAR"/>
                 </div>

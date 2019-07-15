@@ -8,7 +8,7 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer">
-                <div >
+                <div className="box-one">
                     <img src={geeki} alt="logo-fixter"/>
                     <h3 style={{color:"white"}}>FixterGeek</h3>
                 </div>
@@ -20,7 +20,7 @@ class Footer extends Component {
                     <Link to="/">
                         <p>Políticas de Privacidad</p>
                     </Link>
-                    <Link to="">
+                    <Link to="/contacto">
                         <p>Contacto</p>
                     </Link>
                 </div>
@@ -29,9 +29,9 @@ class Footer extends Component {
                     <Link to="/">
                         <p>Blog</p>
                     </Link>
-                    <Link to="/">
+                    <a href="https://medium.com/fixtergeek" target="blank">
                         <p>Medium</p>
-                    </Link>
+                    </a>
                     <Link to="">
                         <p>Podcast</p>
                     </Link>

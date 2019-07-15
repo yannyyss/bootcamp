@@ -15,7 +15,16 @@ class Courses extends Component {
                     <div className="courses-descript">
                         <div>
                             <h2 style={{textAlign:"left"}} className="subtitulos">Cursos</h2>
-                            <p>Programming is a critical skill in today’s economy, and there is a shortage of qualified developers. Whether you’re new to coding, adding more skills, or advancing your career, 10 hours a week will prepare you for your ideal developer job.</p>
+                            <p>
+                                Adquiere las habilidades necesarias para cambiar de trabajo o impulsar ru carrera profesional.
+                            </p>
+                            <br/>
+                            <p>
+                                Aprende a programar desde cualquier
+                                lugar, a la hora que prefieras y en el dispositivo
+                                que más te guste. Encuentra aquí, cursos de las herramientas más utilizadas en el mundo del desarrollo.
+                        </p>
+
                         </div>
                     </div>
                   <div className="cc-image">

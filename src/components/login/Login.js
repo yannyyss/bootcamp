@@ -38,13 +38,13 @@ class Login extends Component {
                                         <Input
                                             prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                                             type="password"
-                                            placeholder="Contrasena"
+                                            placeholder="Contraseña"
                                         />
                                 </Form.Item>
                                 <Form.Item style={{textAlign:"center"}}>
 
                                     <a className="login-form-forgot" href="">
-                                       <p className="forget"> Olvidaste tu contrasena?</p>
+                                       <p className="forget">¿Olvidaste tu contraseña?</p>
                                     </a>
                                     <br/>
                                     <div>

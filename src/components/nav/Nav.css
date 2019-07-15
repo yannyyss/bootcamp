@@ -54,6 +54,17 @@
 .nav a{
     color:white;
 }
+.red-line{
+    background-color: #ca3e47;
+    border: none;
+    height: 2px;
+    width: 0px;
+    transition: all 1s ease;
+    margin: 3px auto;
+}
 .nav a:hover{
-    color: #ca3e47;
+    color: white;
+}
+.nav a:hover .red-line{
+    width: 40px;
 }
