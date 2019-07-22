@@ -3,7 +3,7 @@
     height: 70px;
     background-color: transparent;
     display: flex;
-    color: white;
+    color: black;
     justify-content: space-between;
     align-items: center;
     padding: 0 3%;
@@ -52,7 +52,10 @@
 
 }
 .nav a{
-    color:white;
+    color:#cccccc;
+}
+.nav a:active{
+    color:#ca3e47;
 }
 .red-line{
     background-color: #ca3e47;
@@ -63,7 +66,7 @@
     margin: 3px auto;
 }
 .nav a:hover{
-    color: white;
+    color: #ca3e47;
 }
 .nav a:hover .red-line{
     width: 40px;
