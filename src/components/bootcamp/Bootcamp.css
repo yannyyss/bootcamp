@@ -209,3 +209,57 @@ CARD*/
     box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
 
 }
+@media (max-width: 890px) {
+    .bootcamp-img{
+        width: 300px;
+    }
+    .box-steps{
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .bootcamp-img{
+        height: 200px;
+    }
+    #tp{
+        margin-top: 0px !important;
+    }
+    .summary{
+        margin-top: 80px;
+        height: auto;
+    }
+    .summary p{
+        font-size: 14px;
+    }
+    .summary h4, .invite p{
+        font-size: 16px;
+    }
+    .subtitulos{
+        margin-bottom: 20px;
+    }
+    .steps{
+        justify-content: center;
+        margin: 10px 0;
+    }
+    .how, .invite{
+        padding: 30px 10%;
+    }
+    .step-img{
+        margin: 0;
+        width: 250px;
+    }
+    .step-descript{
+        width: 250px;
+        margin: 5px 0 0 0;
+    }
+    .card-l{
+        flex-wrap: wrap;
+        padding:5% ;
+    }
+    .btn-see{
+        margin: 20px 0 0 0;
+    }
+
+}

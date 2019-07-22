@@ -8,6 +8,10 @@ import dos from "../../assets/iconos_web-02 (1).png"
 import tres from "../../assets/iconos_web-03 (1).png"
 import cuatro from "../../assets/iconos_web-04 (1).png"
 import {Link} from "react-router-dom";
+import oscar from "../../assets/ossscar.jpg"
+import carlitos from "../../assets/carlitos.jpg"
+import jorge from "../../assets/jorge.jpg"
+import raul from "../../assets/raul.jpg"
 
 
 let react = require("../../assets/react.png")
@@ -19,18 +23,31 @@ let node = require("../../assets/node.png")
 let python = require("../../assets/python.png")
 let dj = require("../../assets/dj.png")
 let fire = require("../../assets/fire.png")
-
+let go = require("../../assets/go.png")
+let kuber = require("../../assets/Kubernetes_(container_engine).png")
+let rails = require("../../assets/ruby.png")
+let webpack = require("../../assets/icon-square-big.png")
+let redux = require("../../assets/logo.png")
+let android = require("../../assets/android.png")
+let gatsby = require("../../assets/gatsby.jpeg")
 
 let imagenes = [
     react,
     vue,
     angular,
     ember,
-    docker,
+    gatsby,
     node,
     python,
     dj,
-    fire
+    rails,
+    fire,
+    docker,
+    webpack,
+    go,
+    kuber,
+    redux,
+    android
 
 ]
 
@@ -85,7 +102,14 @@ class HomeContainer extends Component {
                         <div className="sticker"/>
                         <div className="sticker"/>
                         <div className="sticker"/>
-                        <div className="sticker"/>`
+                        <div className="sticker"/>
+                        <div className="sticker"/>
+                        <div className="sticker"/>
+                        <div className="sticker"/>
+                        <div className="sticker"/>
+                        <div className="sticker"/>
+                        <div className="sticker"/>
+                        <div className="sticker"/>
                         <div className="sticker"/>
                         <div className="sticker"/>
                         <div className="sticker"/>
@@ -155,32 +179,33 @@ class HomeContainer extends Component {
                     <div>
                         <Carousel afterChange={this.onChange} autoplay>
                             <div className="box-comment">
-                                <div className="photo-alumno" style={{backgroundImage:`url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/61825522_2176917525736957_640533924828676096_o.jpg?_nc_cat=105&_nc_oc=AQmDd2gHR4IkHHaK3GSGhDh0LBq9ag148VAnStGt-TNcvPa5RP63tMk0fJFo45W9Roo&_nc_ht=scontent.fmex6-1.fna&oh=3a64a0a2d86ee1be6accf189cdfee361&oe=5DC42C6E")`}}></div>
-                                <div className="testimonio">
-                                    <span className="signo">“</span>  <p> The instructors are knowledgeable and engaging, there is more support than you know what to do with, and the school constantly impressed me with it's dedication to creating a safe and inclusive learning environment. The whole experience has been challenging and inspiring in the best ways possible.</p>
+                                <div className="photo-alumno" style={{backgroundImage:`url('${oscar}')`}}></div>
+                                <div className="testimonio ">
+                                    <span className="signo">“</span>  <p> "En Fixter aprendí a programar viniendo de un pasado totalmente distinto al desarrollo de tecnología. Desmenuzan los temas de la forma más simple para que sin importar si sabes mucho o poco, comprendas a la perfección cada uno de ellos o simplemente te actualices. Al día de hoy trabajo en esta industria que además de ser divertida, también es bien remunerada. Considero que cualquier persona puede aprender a programar y cambiar su futuro, qué mejor que sea de la mano de alguien profesional como FixterGeek." </p>
 
-                                    <p>— Ky Capstick</p>
+                                    <p>— Oscar Villeada</p>
                                 </div>
                             </div>
                             <div className="box-comment">
-                                <div className="photo-alumno" style={{backgroundImage:`url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/61825522_2176917525736957_640533924828676096_o.jpg?_nc_cat=105&_nc_oc=AQmDd2gHR4IkHHaK3GSGhDh0LBq9ag148VAnStGt-TNcvPa5RP63tMk0fJFo45W9Roo&_nc_ht=scontent.fmex6-1.fna&oh=3a64a0a2d86ee1be6accf189cdfee361&oe=5DC42C6E")`}}></div>
+                                <div className="photo-alumno" style={{backgroundImage:`url('${carlitos}')`}}></div>
                                 <div className="testimonio">
-                                    <span className="signo">“</span>  <p> The instructors are knowledgeable and engaging, there is more support than you know what to do with, and the school constantly impressed me with it's dedication to creating a safe and inclusive learning environment. The whole experience has been challenging and inspiring in the best ways possible.</p>
-                                    <p>— Ky Capstick</p>
+                                    <span className="signo">“</span>  <p> Tomar un FixterCamp está lejos de ser un simple curso, es un acercamiento a mundo real de la tecnología y las grandes ideas, aprendí de forma práctica y dinámica temas complejos lo cual profesionalizó mi carrera como developer y me impulso a emprender mi propio negocio.</p>
+                                    <p>— Carlos Mendoza</p>
                                 </div>
                             </div>
                             <div className="box-comment">
-                                <div className="photo-alumno" style={{backgroundImage:`url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/61825522_2176917525736957_640533924828676096_o.jpg?_nc_cat=105&_nc_oc=AQmDd2gHR4IkHHaK3GSGhDh0LBq9ag148VAnStGt-TNcvPa5RP63tMk0fJFo45W9Roo&_nc_ht=scontent.fmex6-1.fna&oh=3a64a0a2d86ee1be6accf189cdfee361&oe=5DC42C6E")`}}></div>
+                                <div className="photo-alumno" style={{backgroundImage:`url('${jorge}')`}}></div>
                                 <div className="testimonio">
-                                    <span className="signo">“</span>  <p> The instructors are knowledgeable and engaging, there is more support than you know what to do with, and the school constantly impressed me with it's dedication to creating a safe and inclusive learning environment. The whole experience has been challenging and inspiring in the best ways possible.</p>
-                                    <p>— Ky Capstick</p>
+                                    <span className="signo">“</span>  <p> Estudie la universidad y puedo decir que el ritmo de aprendizaje no se compara con el que Fixter te puede dar en tan solo unas semanas. Además de aprender tecnologías modernas, los profesores hacen algo más que enseñar y es que todos tienen lo que pocos programadores, calidad humana para compartir sus conocimientos.</p>
+                                    <p>— Jorge García</p>
                                 </div>
                             </div>
                             <div className="box-comment">
-                                <div className="photo-alumno" style={{backgroundImage:`url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/61825522_2176917525736957_640533924828676096_o.jpg?_nc_cat=105&_nc_oc=AQmDd2gHR4IkHHaK3GSGhDh0LBq9ag148VAnStGt-TNcvPa5RP63tMk0fJFo45W9Roo&_nc_ht=scontent.fmex6-1.fna&oh=3a64a0a2d86ee1be6accf189cdfee361&oe=5DC42C6E")`}}></div>
+                                <div className="photo-alumno" style={{backgroundImage:`url('${raul}')`}}></div>
                                 <div className="testimonio">
-                                    <span className="signo">“</span>  <p> The instructors are knowledgeable and engaging, there is more support than you know what to do with, and the school constantly impressed me with it's dedication to creating a safe and inclusive learning environment. The whole experience has been challenging and inspiring in the best ways possible.</p>
-                                    <p>— Ky Capstick</p>
+                                    <span className="signo">“</span>  <p> Estudiar en Fixter ha sido una excelente experiencia, aprendes mucho de una manera fácil, rápida, divertida y sobre todo te atienden muy bien, los profesores es un plus ya que son extremadamente pro y saben lo que enseñan.</p>
+
+                                    <p>— Raúl Hernández</p>
                                 </div>
                             </div>
 

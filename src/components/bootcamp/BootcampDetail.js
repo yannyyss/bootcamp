@@ -28,7 +28,7 @@ export const BootcampDetail = () => {
 
                 </div>
             </div>
-            <div className="summary">
+            <div id="tp" className="summary">
                 <h2 style={{textAlign:"left"}} className="subtitulos">Programa</h2>
                 <p className="textos">El Bootcamp tiene una duración de 5 semanas. Semanlamente se liberará
                     el contenido correspondiente, por lo que aunque siempre tendrás acceso a las lecciones en video, no podrás subir tus tareas

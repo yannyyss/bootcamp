@@ -3,6 +3,7 @@
     height: 70px;
     background-color: #323232;
     position: fixed;
+    z-index: 1;
 }
 
 .contacto{
@@ -12,10 +13,19 @@
     flex-wrap: wrap;
 
 }
+.contacto iframe{
+
+    width: 500px;
+    height: 450px;
+}
 .contact{
-    width: 300px;
+    width: 400px;
     flex-grow: 1;
     padding: 0 0 0 50px;
+}
+.map{
+    width: 400px;
+    flex-grow: 1;
 }
 .contact input, .contact textarea{
     width: 100%;
@@ -39,5 +49,17 @@
 .contact p{
     font-size: 16px;
     text-align: center;
+}
+@media(max-width: 769px) {
+    .contacto{
+        padding: 120px 10% 50px 10%;
+    }
+    .contacto iframe{
+        width: 100%;
+    }
+    .contact{
+        margin-top: 50px;
+        padding: 0;
+    }
 }
 

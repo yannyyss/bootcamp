@@ -7,8 +7,7 @@ export const UserCourses = () => {
     return (
         <section className="user-courses">
             <div className="box-c none-user">
-                <p>Ups! Aún no tienes ningun curso. Explora nuestro catálogo y obten tu primer curso al 50%
-                    utilizando el código <strong>#LEARNTOCODE</strong>
+                <p>¡Ups! Aún no tienes ningun curso. Explora nuestro catálogo y obten tu primer curso al 50% <strong> #LEARNTOCODE</strong>
                 </p>
                 <img src={img} alt=""/>
                 <br/>

@@ -15,6 +15,7 @@ class Courses extends Component {
                     <div className="courses-descript">
                         <div>
                             <h2 style={{textAlign:"left"}} className="subtitulos">Cursos</h2>
+                            <br/>
                             <p>
                                 Adquiere las habilidades necesarias para cambiar de trabajo o impulsar ru carrera profesional.
                             </p>

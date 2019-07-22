@@ -97,3 +97,43 @@
     justify-content: space-between;
     margin: 20px 0px;
 }
+@media (max-width: 890px) {
+    .cc-image{
+        width: 300px;
+    }
+    .box-steps{
+        justify-content: center;
+    }
+    .detail-badge img{
+        width: 240px;
+    }
+
+}
+
+
+@media(max-width: 550px) {
+    .cc-image{
+        height: 200px;
+    }
+    .catalogo{
+        margin-top: 50px;
+    }
+    .box-courses{
+        justify-content: center;
+    }
+    .flex{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .detail-badge{
+        text-align: center;
+        margin-top:50px;
+    }
+    .detail-descript h2{
+        font-size: 28px;
+    }
+    .detail-descript p{
+        font-size: 16px;
+    }
+
+}

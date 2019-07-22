@@ -62,6 +62,9 @@
     text-align: center;
 
 }
+.box-c h2{
+    color:rgba(0, 0, 0, 0.65);
+}
 .box-c p{
   font-size: 16px;
 }
@@ -70,8 +73,13 @@
     margin: 20px auto;
 }
 
-@media(max-width: 435px) {
+
+
+@media(max-width: 550px) {
     .ant-tabs-nav-container{
         font-size: 14px !important;
+    }
+    .box-c{
+        width: 90%;
     }
 }

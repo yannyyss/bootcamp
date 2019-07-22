@@ -23,6 +23,7 @@ class Bootcamp extends Component {
                     <div className="bootcamp-descript">
                         <div>
                             <h2 style={{textAlign:"left"}} className="subtitulos">Online Bootcamp</h2>
+                            <br/>
                             <p>
                                 Si eres nuevo en programación, agrega este skill a tu carrera y preparate para impulsar tu carrera. <br/>
                                 Aprende los
