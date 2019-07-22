@@ -320,5 +320,12 @@ MEDIAS*/
     .newsletter h2{
         font-size:  18px;
     }
+    .testimonio p{
+        margin-top: 20px;
+    }
+    .signo{
+        left: 0px;
+    }
+
 }
 
