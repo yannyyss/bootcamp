@@ -26,7 +26,7 @@ class Bootcamp extends Component {
                             <p>
                                 Si eres nuevo en programación, agrega este skill a tu carrera y preparate para impulsar tu carrera. <br/>
                                 Aprende los
-                                fundamentos necesarios para abordar el desarrollo de software web cómo un profesional.
+                                fundamentos necesarios para abordar el desarrollo de software a nivel profesional.
                             </p>
                             <br/>
                             <p>23 de Octubre | 12:00 pm </p>
@@ -52,9 +52,9 @@ class Bootcamp extends Component {
                                 <p>
                                     Con este <strong>Bootcamp Online</strong>, conocerás los fundamentos necesarios para abordar el
                                      <strong> desarrollo de software </strong>
-                                   web cómo un profesional, entenderás cuales son las <strong>herramientas </strong>
+                                   cómo un profesional, entenderás cuales son las <strong>herramientas </strong>
                                     que se usan para crear páginas web, experimentarás también con las tecnologías que nos
-                                    permiten tener una <strong>estructura cliente - servidor </strong> que te permitirá crear <strong>aplicaciones web.</strong>   </p>
+                                    permiten tener una <strong>estructura cliente - servidor </strong> que nos permitirán crear <strong>aplicaciones web.</strong>   </p>
                                     <br/>
                                     <p>
                                     Al finalizar este Bootcamp Online, serás capaz de crear aplicaciones web por tu cuenta
@@ -82,7 +82,7 @@ class Bootcamp extends Component {
                                 <h4>  En la Semana 2 | HTML y CSS :</h4>
                                 <br/>
                                 <p><span>&bull;</span> Aprende como aplicar las propiedades de CSS</p>
-                                <p><span>&bull;</span> Aprende los tipos de selectores</p>
+                                <p><span>&bull;</span> Aprende los tipos de Selectores</p>
                                 <p><span>&bull;</span> Aprende a utilizar electores avanzados</p>
                                 <p><span>&bull;</span> FlexBox</p>
                                 <p><span>&bull;</span> Practicando CSS</p>
@@ -104,9 +104,9 @@ class Bootcamp extends Component {
                                 <p><span>&bull;</span> ¿Cómo servir una página web?</p>
                                 <p><span>&bull;</span> Servidor Local</p>
                                 <p><span>&bull;</span> Aprende a comprimir archivos con WebPack</p>
-                                <p><span>&bull;</span> Pública tu videojuego</p>
+                                <p><span>&bull;</span> Publica tu videojuego</p>
                                 <p><span>&bull;</span> ¿Qué sigue?</p>
-                                <p><span>&bull;</span> Exámen final</p>
+                                <p><span>&bull;</span> Examen final</p>
 
                             </TabPane>
                         </Tabs>
@@ -174,7 +174,7 @@ class Bootcamp extends Component {
                         desarrollo.</p>
                     <p>
                         Encuentra cursos actualizados y concretos de las tecnologías más populares para el desarrollo de aplicaciones
-                        web y móviles. Aprende con los mejores profesionales y forma parte
+                        web y móviles. Aprende con los profesionales y forma parte
                         de nuestra comunidad.
 
                     </p>

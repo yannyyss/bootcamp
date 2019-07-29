@@ -119,11 +119,11 @@ class HomeContainer extends Component {
                     <div className="descript">
                         <h2>La plataforma para aprender </h2>
                         <p>
-                            La tecnología se mueve tan rápido, que en ocasiones, a pesar de la pasión u curiosidad que sientes por ella, es difícil aprender o actualizarse debido a la gran cantidad de información que encontramos en la web o en libros, y a lo dispersa que esta información se encuentra.
+                            La tecnología se mueve tan rápido, que en ocasiones, a pesar de la pasión o curiosidad que sientes por ella, es difícil aprender o actualizarse debido a la gran cantidad de información que encontramos en la web o en libros, y a lo dispersa que esta información se encuentra.
 
                         </p>
                         <p>
-                            Es por eso que FixterGeek, es una plataforma única en donde encontraras cursos, ejercicios, artículos, libros y eventos sobre tecnología.
+                            Por ello que FixterGeek, es una plataforma única en donde encontraras cursos, ejercicios, artículos, libros y eventos sobre tecnología.
                         </p>
                         <p>
                             Si eres un apasionado del código, los bugs y el localhost, estas en el lugar correcto.</p>

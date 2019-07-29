@@ -16,7 +16,7 @@ class Courses extends Component {
                             <h2 style={{textAlign:"left"}} className="subtitulos">Cursos</h2>
                             <br/>
                             <p>
-                                Adquiere las habilidades necesarias para cambiar de trabajo o impulsar ru carrera profesional.
+                                Adquiere las habilidades necesarias para cambiar de trabajo o impulsar tu carrera profesional.
                             </p>
                             <br/>
                             <p>
