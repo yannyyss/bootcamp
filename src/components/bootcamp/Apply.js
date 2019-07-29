@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import FontAwesome from "react-fontawesome";
-import {Link} from "react-router-dom";
 import "./Bootcamp.css"
 import { Steps, Button, message } from 'antd';
 import {StepUno} from "./StepUno"
@@ -55,7 +53,7 @@ class Apply extends Component {
                                     <Step key={item.title} title={item.title} />
                                 ))}
                             </Steps>
-                            <div className="steps-content" style={{paddingBottom:"30px"}}>{steps[current].content}</div>
+                            <div className="steps-content">{steps[current].content}</div>
                             <div className="steps-action">
                                 {current > 0 && (
                                     <Button style={{ marginLeft: 8 }} onClick={() => this.prev()}>

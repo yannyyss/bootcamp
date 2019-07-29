@@ -124,6 +124,8 @@ WHY*/
     border-radius: 4px;
     text-align: center;
     transition: all 1s ease;
+    padding: 0% 1% 1% 1%;
+    box-sizing: border-box;
 }
 .card-beneficios img{
     width: 50px;
@@ -247,10 +249,112 @@ WHY*/
     cursor: pointer;
 }
 
+/*TEAM*/
+.team{
+    width: 100%;
+    padding: 120px 10%;
+    font-size: 18px;
+}
+.team h3{
+    color:#525252;
+    font-size: 28px;
+}
+.box-line{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+    margin: 10px 0 30px 0;
+}
+.team-line{
+    width: 10%;
+}
+.team-members{
+    width: 80%;
+}
+.team-members hr{
+    height: 1px;
+    border: none;
+    background-color: #525252;
+    border-radius: 1px;
+    opacity: .5;
+}
+.box-miembros{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box_team{
+    width: 250px;
+    cursor: pointer;
+}
+.box_team h4{
+    font-size: 18px;
+    color:#525252;
+    margin-top: 8px;
+}
+.box_team span{
+    margin-right: 10px;
+    font-size: 20px;
+    color:#525252;
+}
+.cuadro{
+    width:200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+.brenda{
+    background-image: url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/21105859_1384283821667002_3656915529923068437_n.jpg?_nc_cat=104&_nc_oc=AQlkrfNO72f5OZ34wYplNke2GU0Z4JHLZpdgwVneDMQZtoQ5C7VG1OkR51r73QKzoqQ&_nc_ht=scontent.fmex6-1.fna&oh=b32565b892ef076ed3d26ca4310f6977&oe=5DA3B5DD");
+    transition: all 1s ease;
+}
+.bliss{
+        background-image: url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/56414061_10219388463320220_4036709091425386496_o.jpg?_nc_cat=110&_nc_oc=AQlB76ch2NQQtXz7tZv1x_JDxS6OLhKhg8GmPhtQMEEBIDuhhc1bJNs_dMyBvt2mtag&_nc_ht=scontent.fmex6-1.fna&oh=e6cd7b281b5104924658698c12ad0e3c&oe=5DDBBE92");
+    transition: all 1s ease;
+}
+.david{
+    background-image: url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/14457349_1225629430885751_7809814977742887546_n.jpg?_nc_cat=103&_nc_oc=AQktKGpYT1VAJ-pFVD_Sh1861nRlBy7HJ-ZRbdNnm98S1SFTO3kYslSTD2_LFoCsDlU&_nc_ht=scontent.fmex6-1.fna&oh=3276c3644b53bc9568de29ef641d1752&oe=5DA72EB5");
+    transition: all 1s ease;
+}
+.oswaldo{
+    background-image: url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/47324565_2325719507656940_6865879292832645120_o.jpg?_nc_cat=101&_nc_oc=AQm0a0Al0Fv-vQzj79HiVAVZ5-EVJTDBlxL6x4MVq0CRUph1DaMejBV86R9nZs8fR7Q&_nc_ht=scontent.fmex6-1.fna&oh=f425788e9d82778321528f74abf7cbd5&oe=5DE1080B");
+    transition: all 1s ease;
+}
+.martin{
+    background-image: url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/38875571_1892395260783456_8183369281203863552_o.jpg?_nc_cat=102&_nc_oc=AQmXJ-jDtfxgQfZix6Z0Vb6tN0Fc86aLy0WbzrcyhfcRQ7N-9Rx8B33fzBJCW6aTsOA&_nc_ht=scontent.fmex6-1.fna&oh=316c8830a60ac50c81a9256498d80b92&oe=5DDCEA2B");
+    transition: all 1s ease;
+}
+
+.box_team:hover{
+    transform: scale(1.1);
+}
 
 /*
 
 MEDIAS*/
+@media (min-width: 1440px) {
+    .sticker{
+
+        margin: 30px;
+    }
+    .about h2{
+        font-size: 48px;
+    }
+    .about p{
+        font-size: 24px;
+    }
+    .card-beneficios{
+        width: 280px;
+        padding: 2%;
+        height: auto;
+    }
+    .course-card{
+        width: 350px !important;
+    }
+
+
+
+}
 
 @media (max-width: 768px) {
    .slide h2{
@@ -302,6 +406,7 @@ MEDIAS*/
     }
     .descript{
         font-size: 16px;
+        margin-top: 0px;
     }
     .subtitulos{
         font-size: 28px;
@@ -326,6 +431,54 @@ MEDIAS*/
     .signo{
         left: 0px;
     }
+    .destacados, .about, .testimonios{
+        padding: 30px 10%;
+    }
+    .team-line{
+        width: 40%;
+    }
+    .team-members{
+        width: 60%;
+    }
+    .box_team{
+        width: 150px;
+        margin: 10px;
+    }
+    .box_team h4{
+        font-size: 18px;
+        color:#525252;
+        margin-top: 8px;
+    }
+    .box_team span{
+        margin-right: 10px;
+        font-size: 20px;
+        color:#525252;
+    }
+    .cuadro{
+        width:150px;
+        height: 150px;
+        background-position: center;
+        background-size: cover;
+    }
 
+}
+
+@media (max-width: 320px) {
+    .slide h2{
+        font-size: 28px;
+        font-weight: bolder;
+    }
+    .slide p{
+        font-size: 16px;
+    }
+    .destacados, .about, .testimonios{
+        padding: 30px 5%;
+    }
+    .newsletter button{
+        width: 100%;
+    }
+    .newsletter input{
+        width: 100%;
+    }
 }
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./Profile.css"
 import img from "../../assets/secciones-02.png"
 import ButtonUser from "../common/ButtonUser"

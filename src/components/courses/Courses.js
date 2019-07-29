@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from "../bootcamp/Bootcamp";
 import "./Courses.css"
 import {CourseCard} from "../card/CourseCard";
 

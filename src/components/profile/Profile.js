@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./Profile.css"
 import { Tabs } from 'antd';
 import {UserCourses} from "./UserCourses";

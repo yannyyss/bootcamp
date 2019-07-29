@@ -14,7 +14,7 @@ class Footer extends Component {
                 </div>
                 <div>
                     <h3>Sobre Nosotros</h3>
-                    <Link to="/">
+                    <Link to="/fixter-team">
                         <p>Nuestro Equipo</p>
                     </Link>
                     <Link to="/">
@@ -32,9 +32,9 @@ class Footer extends Component {
                     <a href="https://medium.com/fixtergeek" target="blank">
                         <p>Medium</p>
                     </a>
-                    <Link to="">
+                    <a href="https://open.spotify.com/show/2cFrBnAB5o4Sk6mkU733QX" target="blank">
                         <p>Podcast</p>
-                    </Link>
+                    </a>
                 </div>
                 <div className="redes">
                     <h3>Síguenos</h3>

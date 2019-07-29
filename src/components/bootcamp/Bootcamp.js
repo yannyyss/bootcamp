@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from "../common/Button"
 import "./Bootcamp.css"
-import { Tabs, Select } from 'antd';
+import { Tabs } from 'antd';
 import ButtonWhite from "../common/ButtonWhite"
 import {Link} from "react-router-dom";
 import step1 from "../../assets/iconos_100x100_Mesa de trabajo 1.png"
@@ -10,7 +10,6 @@ import step3 from "../../assets/iconos_100x100-03.png"
 import step4 from "../../assets/iconos_100x100-04.png"
 
 const { TabPane } = Tabs;
-const { Option } = Select;
 
 class Bootcamp extends Component {
     componentDidMount () {

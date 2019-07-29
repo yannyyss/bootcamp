@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./Profile.css"
 import img from "../../assets/secciones-03.png"
-import ButtonUser from "../common/ButtonUser"
 
 export const UserBooks = () => {
     return (

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "./Login.css";
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
-import FontAwesome from "react-fontawesome";
+import { Form, Icon, Input } from 'antd';
 import {Link} from "react-router-dom";
 
 class Registro extends Component {

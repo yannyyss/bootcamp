@@ -48,3 +48,14 @@
         text-align: center;
     }
 }
+
+@media(max-width: 320px) {
+    .footer h2, .footer h3{
+        color: rgba(204,204,204,.5);
+        font-size: 18px;
+    }
+    .footer p{
+        color: rgba(204,204,204,.5);
+        font-size: 14px;
+    }
+}

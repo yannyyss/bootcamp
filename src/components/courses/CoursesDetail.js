@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import "./Courses.css"
 import badge from "../../assets/badget1.png"
-import {Link} from "react-router-dom";
 
 import { Collapse } from 'antd';
 import {CardVideo} from "../card/CardVideo";
@@ -15,7 +14,17 @@ const text = (
     </p>
 );
 
+
+
 export const CoursesDetail = () => {
+
+    useEffect(
+        ()=> {
+            window.scroll(0, 0)
+        },
+        []
+    )
+
     return (
         <section>
             <div className="black"></div>

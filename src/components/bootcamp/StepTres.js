@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Bootcamp.css"
-import {Form, Icon, Input} from "antd";
-import {Link} from "react-router-dom";
+import {Form, Input} from "antd";
 
 
 export const StepTres = () => {

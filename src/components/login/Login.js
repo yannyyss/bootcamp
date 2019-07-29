@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Login.css";
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Icon, Input } from 'antd';
 import FontAwesome from "react-fontawesome";
 import {Link} from "react-router-dom";
 
@@ -43,7 +43,7 @@ class Login extends Component {
                                 </Form.Item>
                                 <Form.Item style={{textAlign:"center"}}>
 
-                                    <a className="login-form-forgot" href="">
+                                    <a className="login-form-forgot" href="/">
                                        <p className="forget">¿Olvidaste tu contraseña?</p>
                                     </a>
                                     <br/>

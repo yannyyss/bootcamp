@@ -10,6 +10,7 @@ import Apply from "./components/bootcamp/Apply";
 import ProfileContainer from "./components/profile/ProfileContainer";
 import {CoursesDetail} from "./components/courses/CoursesDetail";
 import {BootcampDetail} from "./components/bootcamp/BootcampDetail";
+import Team from "./components/home/Team";
 
 
 export const Router = () => (
@@ -20,6 +21,7 @@ export const Router = () => (
         <Route exact path="/bootcamp" component={Bootcamp}/>
         <Route path="/bootcamp/detail" component={BootcampDetail}/>
         <Route path="/contacto" component={Contacto}/>
+        <Route path="/fixter-team" component={Team}/>
         <Route path="/login" component={LoginContainer}/>
         <Route path="/registro" component={Registro}/>
         <Route path="/apply" component={Apply}/>

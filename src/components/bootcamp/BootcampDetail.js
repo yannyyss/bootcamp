@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./Bootcamp.css"
 import {Link} from "react-router-dom";
 import Button from "../common/Button";
-import {Tabs} from "antd";
 import {CardLessons} from "./CardLessons";
 
 
