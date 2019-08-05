@@ -71,3 +71,49 @@
 .nav a:hover .red-line{
     width: 40px;
 }
+.movil{
+    display: none;
+}
+.dropdown {
+    position: relative;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    right: -22px;
+    top: 24px;
+}
+.dropdown-content p{
+    font-size: 16px;
+    color:#525252;
+    margin: 0;
+    padding: 8px 12px;
+}
+.linea{
+    border-top: 1px solid rgba(204,204,204,.3);
+
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+@media(max-width: 555px){
+    .web{
+        display: none;
+    }
+    .movil{
+        display: inherit;
+        color:#cccccc;
+        margin-right: 8px;
+        font-size: 24px;
+    }
+    .dropdown{
+        display: inline-block;
+    }
+}

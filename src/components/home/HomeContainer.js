@@ -113,8 +113,6 @@ class HomeContainer extends Component {
                         <div className="sticker"/>
                         <div className="sticker"/>
                         <div className="sticker"/>
-
-
                     </div>
                     <div className="descript">
                         <h2>La plataforma para aprender </h2>
@@ -217,7 +215,7 @@ class HomeContainer extends Component {
                     </h2>
                     <br/>
                     <div>
-                        <input type="text" placeholder="contacto@fixter.org"/>
+                        <input type="email" placeholder="contacto@fixter.org"/>
                         <button>Enviar</button>
                     </div>
                 </section>

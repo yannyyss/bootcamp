@@ -2,6 +2,7 @@ import React from 'react';
 import "./Profile.css"
 import img from "../../assets/secciones-02.png"
 import ButtonUser from "../common/ButtonUser"
+import {Link} from "react-router-dom"
 
 export const UserBootcamp = () => {
     return (
@@ -12,7 +13,9 @@ export const UserBootcamp = () => {
                 <img  style={{opacity:".7"}} src={img} alt=""/>
                 <br/>
                 <br/>
-                <ButtonUser  text="VER DETALLE"/>
+                <Link to="/bootcamp">
+                    <ButtonUser  text="VER DETALLE"/>
+                </Link>
             </div>
             <div>
 

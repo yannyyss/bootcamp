@@ -49,9 +49,8 @@ class Team extends Component {
                     </div>
 
                 </div>
-                    <br/>
-                    <br/>
-                    <div className="box-miembros">
+
+                    <div className="box-miembros just">
                     <div className="box-line">
                         <div className="team-line">
                             <h3>Miembros</h3></div>
@@ -71,7 +70,7 @@ class Team extends Component {
                             <FontAwesome name="linkedin"/>
                         </a>
                     </div>
-                    <div className="box_team">
+                    <div className="box_team ">
                         <div className="cuadro oswaldo">
                         </div>
                         <h4>Oswaldo Martinez</h4>
@@ -87,6 +86,17 @@ class Team extends Component {
                             </div>
                             <h4>Martin Melo</h4>
                             <a href="https://www.facebook.com/david.pzmck">
+                                <FontAwesome name="facebook-square" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/david-zavala-bartolome/" target="blank">
+                                <FontAwesome name="linkedin"/>
+                            </a>
+                        </div>
+                        <div className="box_team">
+                            <div className="cuadro oso">
+                            </div>
+                            <h4>Oscar Villeda</h4>
+                            <a href="https://www.facebook.com/oscaruve">
                                 <FontAwesome name="facebook-square" />
                             </a>
                             <a href="https://www.linkedin.com/in/david-zavala-bartolome/" target="blank">

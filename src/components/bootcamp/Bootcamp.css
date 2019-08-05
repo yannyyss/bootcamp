@@ -79,8 +79,20 @@
     width: 200px;
     background-position: center;
     background-size: cover;
-    background-image: url("https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     margin: 0 20px 0 0;
+}
+.photo1{
+    background-image: url("../../assets/ember.jpg");
+}
+.photo2{
+    background-image: url("../../assets/git.jpg");
+}
+.photo3{
+    background-image: url("../../assets/reto.jpg");
+
+}
+.photo4{
+    background-image: url("../../assets/17492500_1522831704447330_3133267459982867769_o.jpg")
 }
 .circle-white{
     width: 50px;

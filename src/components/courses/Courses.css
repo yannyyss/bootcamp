@@ -25,10 +25,11 @@
     width: 500px;
     height: 100%;
     flex-grow: 2;
-    background-image: url('https://scontent.fmex6-1.fna.fbcdn.net/v/t31.0-8/13308316_10209512761793854_5949929877258034328_o.jpg?_nc_cat=100&_nc_eui2=AeFmfUXHC9r-BnZ6ALNj5y9fv4unPAS-VJIyiV-m0-z-_dg-nZbEfvUPSiq6mHDM59Er3oJ418MWmrpzURxeXEoOu-wr72ZVuced4cJ37cJSeQ&_nc_oc=AQklAVgaOJt7rdkv1GMDRwLAP8O0A5MV9Ii_Ynq1Hc9SNS3NNF6wRHH7xN2VaSOJNF0&_nc_ht=scontent.fmex6-1.fna&oh=0b06a87ff800a159f0d25f847d944cee&oe=5DACC858');
+    background-image: url('../../assets/_DSC0390.30157168.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: right;
     background-attachment: fixed;
+
 }
 .box-courses{
     display: flex;
@@ -65,28 +66,12 @@
     text-align: right;
 }
 .detail-badge img{
-    width: 300px;
+    width: 200px;
 }
-.detail-author{
-    display: flex;
-    height: 50px;
-    align-items: center;
-}
-.detail-author h4{
-    margin-left: 10px;
-    color:#696969;
-    font-size: 16px;
-}
-.divider{
-    width: 80%;
-    margin: 0 auto;
-    height: 1px;
-    border: none;
-    background-color:#a7a7a7 ;
-    opacity: .2;
-}
+
 .box-detail{
     padding: 30px 10%;
+    background-color: #f5f5f5;
 }
 .box-detail h2{
     font-size: 24px;
@@ -97,6 +82,79 @@
     justify-content: space-between;
     margin: 20px 0px;
 }
+
+.course-descript{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.descripcion-text{
+    width: 700px;
+    flex-grow: 2;
+}
+.descripcion-text iframe{
+    width: 100%;
+    height: 380px;
+}
+.descripcion-text h3{
+    font-size: 24px;
+    margin: 24px 0;
+}
+.descripcion-text p{
+    font-size: 18px;
+}
+.descripcion-autor{
+    width: 240px;
+    height: 360px;
+    flex-grow: 1;
+    margin: 0  0px 0 30px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    padding: 2%;
+    box-sizing: border-box;
+}
+.descripcion-autor h3, h4 .descripcion-text h3{
+    color:#323232;
+}
+.descripcion-autor h3{
+    font-size: 18px;
+}
+.descripcion-autor h4{
+    font-size: 14px;
+}
+.descripcion-autor p{
+    font-size: 12px;
+}
+.descripcion-autor span{
+    font-size: 12px;
+    margin-right: 8px;
+}
+.autor-foto{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+.divider{
+    width: 100%;
+    margin: 0 auto;
+    height: 1px;
+    border: none;
+    background-color:#a7a7a7 ;
+    opacity: .2;
+    margin-bottom: 8px;
+}
+@media (max-width: 1024px) {
+   .descripcion-text{
+       width: 500px;
+   }
+
+}
+
 @media (max-width: 890px) {
     .cc-image{
         width: 300px;
@@ -107,7 +165,11 @@
     .detail-badge img{
         width: 240px;
     }
-
+    .descripcion-autor{
+       margin: 0px;
+        padding: 5% ;
+        margin-top: 32px;
+    }
 }
 
 
@@ -134,6 +196,9 @@
     }
     .detail-descript p{
         font-size: 16px;
+    }
+    .descripcion-text iframe{
+        height: 240px;
     }
 
 }

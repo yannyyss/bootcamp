@@ -19,6 +19,10 @@
 .footer p{
     color: rgba(204,204,204,.5);
     font-size: 18px;
+    transition: all 1s ease;
+}
+.footer p:hover{
+    color: white;
 }
 .footer img{
     height: 120px;

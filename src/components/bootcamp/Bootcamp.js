@@ -116,7 +116,7 @@ class Bootcamp extends Component {
                     <h2 className="subtitulos">¿Cómo funciona un Bootcamp Online?</h2>
                     <div className="box-steps">
                         <div className="steps">
-                            <div className="step-img">
+                            <div className="step-img photo1">
                                 <div className="circle-white">
                                     <img src={step1} alt=""/>
                                 </div>
@@ -131,7 +131,7 @@ class Bootcamp extends Component {
                             </div>
                         </div>
                         <div className="steps">
-                            <div className="step-img">
+                            <div className="step-img photo2">
                                 <div className="circle-white">
                                     <img src={step2} alt=""/>
                                 </div>
@@ -142,7 +142,7 @@ class Bootcamp extends Component {
                             </div>
                         </div>
                         <div className="steps">
-                            <div className="step-img">
+                            <div className="step-img photo3">
                                 <div className="circle-white">
                                     <img src={step4} alt=""/>
                                 </div>
@@ -153,7 +153,7 @@ class Bootcamp extends Component {
                             </div>
                         </div>
                         <div className="steps">
-                            <div className="step-img">
+                            <div className="step-img photo4">
                                 <div className="circle-white">
                                     <img src={step3} alt=""/>
                                 </div>

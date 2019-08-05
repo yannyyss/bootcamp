@@ -17,20 +17,17 @@ class Footer extends Component {
                     <Link to="/fixter-team">
                         <p>Nuestro Equipo</p>
                     </Link>
-                    <Link to="/">
+                    <Link to="/politicas-de-privacidad-fixter">
                         <p>Políticas de Privacidad</p>
                     </Link>
                     <Link to="/contacto">
                         <p>Contacto</p>
                     </Link>
                 </div>
-                <div>
+                <div className="rec">
                     <h3>Recursos</h3>
-                    <Link to="/">
+                    <a href="https://medium.com/fixtergeek" target="_blank">
                         <p>Blog</p>
-                    </Link>
-                    <a href="https://medium.com/fixtergeek" target="blank">
-                        <p>Medium</p>
                     </a>
                     <a href="https://open.spotify.com/show/2cFrBnAB5o4Sk6mkU733QX" target="blank">
                         <p>Podcast</p>

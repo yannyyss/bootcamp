@@ -6,6 +6,8 @@ import {Form, Input} from "antd";
 export const StepDos = () => {
     return (
         <div className="step">
+            <p>Escribe tu nombre completo, ya que así aparecerá en tu certificado</p>
+
             <Form.Item>
                 <Input
                     type="text"

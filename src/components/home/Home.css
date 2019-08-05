@@ -10,6 +10,7 @@ HOME*/
     background-position: center;
     background-image: url('https://scontent.fmex6-1.fna.fbcdn.net/v/t31.0-8/19621088_1334780026617382_7823503395334101987_o.jpg?_nc_cat=104&_nc_oc=AQlo2QvG407PrSCh9PK25aAOt8Y22pJs0Lim0tlGe9Oy7VtssLY27vMJPJ3XT8EW8bc&_nc_ht=scontent.fmex6-1.fna&oh=f2dd8ade26e2261761fb084e36020ef9&oe=5D7D6EB0');
     font-family: Avenir;
+    background-attachment: fixed;
 }
 .cover{
     width: 100%;
@@ -283,10 +284,18 @@ WHY*/
 .box-miembros{
     display: flex;
     flex-wrap: wrap;
+    min-height: 280px;
+    margin: 40px 0 20px 0;
+
+}
+.just{
+    justify-content: space-between;
 }
 .box_team{
-    width: 250px;
+    width: 200px;
     cursor: pointer;
+    transition: all 1s ease;
+    margin: 0 20px 0 0 ;
 }
 .box_team h4{
     font-size: 18px;
@@ -324,12 +333,21 @@ WHY*/
     background-image: url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/38875571_1892395260783456_8183369281203863552_o.jpg?_nc_cat=102&_nc_oc=AQmXJ-jDtfxgQfZix6Z0Vb6tN0Fc86aLy0WbzrcyhfcRQ7N-9Rx8B33fzBJCW6aTsOA&_nc_ht=scontent.fmex6-1.fna&oh=316c8830a60ac50c81a9256498d80b92&oe=5DDCEA2B");
     transition: all 1s ease;
 }
-
-.box_team:hover{
-    transform: scale(1.1);
+.oso{
+    background-image: url("https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/18198332_424530341261852_8932050855702655407_n.jpg?_nc_cat=107&_nc_oc=AQnnXfUHVuR6btUTGJybOcU_5qYZjH6mlo97WlItf4scghuXgcDSyWuBg9-nBWGfJhs&_nc_ht=scontent.fmex6-1.fna&oh=ca6143f8c40dbfa7ae47573da08cab98&oe=5DEC1722");
+    transition: all 1s ease;
 }
 
+.box_team span:hover{
+    color:#ca3e47;
+}
+.politicas{
+    padding: 120px 10%;
+    box-sizing: border-box;
+}
 /*
+
+
 
 MEDIAS*/
 @media (min-width: 1440px) {
