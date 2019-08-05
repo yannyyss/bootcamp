@@ -82,6 +82,15 @@ class HomeContainer extends Component {
     render() {
         return (
             <section>
+                <meta
+                    name="description"
+                    content="FixterGeek, es una plataforma única en donde encontraras cursos, ejercicios, artículos, libros y eventos sobre tecnología."
+                />
+                <meta
+                    name="keywords"
+                    content="cursos, capacitación, react, angular, tecnología, programación, javascript, python, php, online, fixtergeek"
+                />
+                <title>FixterGeek</title>
                 <section className="slide">
                     <div className="cover">
                         <div className="slogan">

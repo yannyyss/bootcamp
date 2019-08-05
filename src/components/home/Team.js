@@ -9,6 +9,16 @@ class Team extends Component {
     render() {
         return (
             <section >
+                <meta
+                    name="description"
+                    content="En FixterGeek estamos comprometidos con la educación tecnológica,
+                    estamos comprometidos con contribuir a la formación de desarrolladores en México."
+                />
+                <meta
+                    name="keywords"
+                    content="cursos, capacitación, react, angular, tecnología, programación, javascript, python, php, online, fixtergeek"
+                />
+                <title>Fixter Team</title>
                 <div className="black"></div>
                 <div className="team">
                 <h2 className="subtitulos">Conoce a nuestro equipo</h2>

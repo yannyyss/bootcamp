@@ -10,6 +10,18 @@ class Courses extends Component {
     render() {
         return (
             <div className="courses ">
+                <meta
+                    name="description"
+                    content="  Aprende a programar desde cualquier
+                                lugar, a la hora que prefieras y en el dispositivo
+                                que más te guste. Encuentra aquí, cursos de las herramientas más utilizadas en el mundo del desarrollo.
+                       "
+                />
+                <meta
+                    name="keywords"
+                    content="cursos, capacitación, react, angular, tecnología, programación, javascript, python, php, online, fixtergeek"
+                />
+                <title>Cursos | FixterGeek</title>
               <div className="intro-courses">
                     <div className="courses-descript">
                         <div>

@@ -18,6 +18,16 @@ class Bootcamp extends Component {
     render() {
         return (
             <section className="bootcamp">
+                <meta
+                    name="description"
+                    content="Establece las bases de programación y preparate para una este programa creado especialmente para
+                        principiantes que quieren incursionar en el mundo del desarrollo web."
+                />
+                <meta
+                    name="keywords"
+                    content="cursos, capacitación, react, angular, tecnología, programación, javascript, python, php, online, fixtergeek"
+                />
+                <title>Bootcamp | FixterGeek</title>
                 <div className="intro-bootcamp">
                     <div className="bootcamp-descript">
                         <div>

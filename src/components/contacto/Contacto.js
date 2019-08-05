@@ -9,6 +9,15 @@ class Contacto extends Component {
     render() {
         return (
             <div className="">
+                <meta
+                    name="description"
+                    content=" Completa el formulario y nos pondremos en contacto contigo lo antes posible."
+                />
+                <meta
+                    name="keywords"
+                    content="cursos, capacitación, react, angular, tecnología, programación, javascript, python, php, online, fixtergeek"
+                />
+                <title>Contacto | FixterGeek</title>
                 <div className="black"></div>
                 <div className="contacto">
                     <div className="map">
