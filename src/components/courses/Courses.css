@@ -28,7 +28,9 @@
     background-image: url('../../assets/_DSC0390.30157168.jpeg');
     background-size: cover;
     background-position: right;
+    /*
     background-attachment: fixed;
+    */
 
 }
 .box-courses{
