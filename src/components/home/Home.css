@@ -481,7 +481,7 @@ MEDIAS*/
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
     .slide h2{
         font-size: 28px;
         font-weight: bolder;

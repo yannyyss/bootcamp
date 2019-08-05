@@ -207,14 +207,14 @@ class HomeContainer extends Component {
                                     <p>— Jorge García</p>
                                 </div>
                             </div>
-                            <div className="box-comment">
+                          {/*  <div className="box-comment">
                                 <div className="photo-alumno" style={{backgroundImage:`url('${raul}')`}}></div>
                                 <div className="testimonio">
                                     <span className="signo">“</span>  <p> Estudiar en Fixter ha sido una excelente experiencia, aprendes mucho de una manera fácil, rápida, divertida y sobre todo te atienden muy bien, los profesores es un plus ya que son extremadamente pro y saben lo que enseñan.</p>
 
                                     <p>— Raúl Hernández</p>
                                 </div>
-                            </div>
+                            </div>*/}
 
                         </Carousel>
                     </div>
