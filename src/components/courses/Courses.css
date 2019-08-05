@@ -28,9 +28,7 @@
     background-image: url('../../assets/_DSC0390.30157168.jpeg');
     background-size: cover;
     background-position: right;
-    /*
     background-attachment: fixed;
-    */
 
 }
 .box-courses{
@@ -179,8 +177,11 @@
     .cc-image{
         height: 200px;
     }
+
     .catalogo{
-        margin-top: 50px;
+        margin-top: 32px;
+        height: auto;
+        padding: 0 5%;
     }
     .box-courses{
         justify-content: center;
@@ -201,6 +202,9 @@
     }
     .descripcion-text iframe{
         height: 240px;
-    }
+    }.intro-courses{
+
+         height: auto;
+     }
 
 }
