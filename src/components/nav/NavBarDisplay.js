@@ -33,9 +33,15 @@ export const NavBarDisplay = () => {
             <div className="movil dropdown">
                 <FontAwesome name="bars"/>
                 <div className="dropdown-content">
+                    <Link to="/bootcamp">
                     <p>Bootcamp</p>
-                    <p>Cursos</p>
-                    <p className="linea">Login</p>
+                    </Link>
+                    <Link to="/courses">
+                        <p>Cursos</p>
+                    </Link>
+                    <Link to="/login">
+                        <p className="linea">Login</p>
+                    </Link>
                 </div>
             </div>
         </div>
