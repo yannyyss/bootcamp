@@ -3,19 +3,19 @@ import "./Bootcamp.css"
 
 
 
-export const CardLessons = () => {
+export const CardLessons = ({week, date, name, descript}) => {
     return (
         <section className="card-l">
             <div>
-                <h2>Semana 0</h2>
-                <p>21 al 27 de Octubre</p>
+                <h2>{week}</h2>
+                <p>{date}</p>
             </div>
             <div>
-                <h2>Introducción al Desarrollo Web</h2>
-                <p>Prework</p>
+                <h2>{name}</h2>
+                <p>{descript}</p>
             </div>
             <div>
-                <button className="btn-see">Ver</button>
+                <p className="btn-see">Ver</p>
 
             </div>
         </section>

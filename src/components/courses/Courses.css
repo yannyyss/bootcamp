@@ -148,6 +148,9 @@
     opacity: .2;
     margin-bottom: 8px;
 }
+
+
+
 @media (max-width: 1024px) {
    .descripcion-text{
        width: 500px;
