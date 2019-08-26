@@ -5,14 +5,18 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'antd/dist/antd.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
-
+import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
+import createStore from './redux/store'
+import 'toastr/build/toastr.css'
 
 
 const WithRoute = () => (
-    <Router>
-        <App />
-    </Router>
+    <Provider store={createStore()}>
+        <Router>
+            <App />
+        </Router>
+    </Provider>
 )
 
 ReactDOM.render(<WithRoute />, document.getElementById('root'));

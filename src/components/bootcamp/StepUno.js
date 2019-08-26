@@ -7,10 +7,15 @@ export const StepUno = () => {
             <h2>Bootcamp online</h2>
             <p>23 de Septiembre | Desarrollo Web</p>
             <p><strong>$1,000.00 MXN</strong></p>
-            <br/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                accusantium atque culpa cum dicta dolores est illum laudantium
-                minima nihil, nisi nulla obcaecati possimus quaerat quidem quo soluta? Praesentium, voluptates!    </p>
+            <br />
+            <p>
+                Este es nuestro primer bootcamp online, tú formarás parte de
+                nuestros alumnos pioneros y tendrás acceso a descuentos de por vida
+                además de la oportunidad de inscribirte a ediciones presenciales
+                siempre con un precio mucho menor.
+                El precio de este bootcamp online
+                es simbólico, ya que las siguientes ediciones no tendran este precio.
+                    </p>
         </div>
     );
 };

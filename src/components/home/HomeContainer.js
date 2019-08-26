@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import "./Home.css"
 import Button from "../common/Button";
-import {CourseCard} from "../card/CourseCard";
+import { CourseCard } from "../card/CourseCard";
 import { Carousel } from 'antd';
 import uno from "../../assets/iconos_web_Mesa de trabajo 1 (1).png"
 import dos from "../../assets/iconos_web-02 (1).png"
 import tres from "../../assets/iconos_web-03 (1).png"
 import cuatro from "../../assets/iconos_web-04 (1).png"
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import oscar from "../../assets/ossscar.jpg"
 import carlitos from "../../assets/carlitos.jpg"
 import jorge from "../../assets/jorge.jpg"
+// redux
+import { connect } from 'react-redux'
+import { getBootcampsAction } from '../../redux/bootcampDuck'
 
 
 let react = require("../../assets/react.png")
@@ -64,7 +67,7 @@ class HomeContainer extends Component {
             let imgs = document.querySelectorAll('.sticker-img.sticker-front')
             let back = document.querySelectorAll('.sticker-img.sticker-back')
             console.log(imgs)
-            imgs.forEach((div,i)=>{
+            imgs.forEach((div, i) => {
                 div.style = `background-image:url('${imagenes[i]}')`
                 back[i].style = `background-image:url('${imagenes[i]}')`
             })
@@ -72,11 +75,13 @@ class HomeContainer extends Component {
             //img.style = 'background-color:red'
         }
         document.body.appendChild(script)
+        // redux
+        //this.props.getBootcampsAction()
     }
 
     onChange = (a, b, c) => {
-
-        console.log(a, b, c);    };
+        //console.log(a, b, c);
+    };
 
     render() {
         return (
@@ -96,31 +101,31 @@ class HomeContainer extends Component {
                             <h2>Aprende las <strong>herramientas</strong> y <strong>frameworks</strong> que usan los profesionales de la industria</h2>
                             <p>Cursos, tutoriales, botocamps
                             </p>
-                            <br/>
+                            <br />
                             <Link to="/courses">
-                                <Button ico=">_" text=" Explorar"/>
+                                <Button ico=">_" text=" Explorar" />
                             </Link>
                         </div>
                     </div>
                 </section>
                 <section className="about">
                     <div className="box-framework">
-                        <div className="sticker"/>
                         <div className="sticker" />
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
-                        <div className="sticker"/>
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
+                        <div className="sticker" />
                     </div>
                     <div className="descript">
                         <h2>La plataforma para aprender </h2>
@@ -133,9 +138,9 @@ class HomeContainer extends Component {
                         </p>
                         <p>
                             Si eres un apasionado del código, los bugs y el localhost, estas en el lugar correcto.</p>
-                        <br/>
+                        <br />
                         <Link to="/courses">
-                            <Button ico="</>" text=" Iniciar"/>
+                            <Button ico="</>" text=" Iniciar" />
                         </Link>
                     </div>
                 </section>
@@ -143,28 +148,28 @@ class HomeContainer extends Component {
                     <h2>¿Por qué aprender en Fixter? </h2>
                     <div className="box-why">
                         <div className="card-beneficios">
-                            <img src={cuatro} alt=""/>
+                            <img src={cuatro} alt="" />
                             <div className="beneficios">
                                 <h3>Diversidad</h3>
                                 <p>Explora nuestros cursos y bootcamps, y elige el que más te interese.</p>
                             </div>
                         </div>
                         <div className="card-beneficios">
-                            <img src={tres} alt=""/>
+                            <img src={tres} alt="" />
                             <div className="beneficios">
                                 <h3>Práctica</h3>
                                 <p>Toma cada curso a tu ritmo y a tu tiempo. Están siempre disponibles.</p>
                             </div>
                         </div>
                         <div className="card-beneficios">
-                            <img src={uno} alt=""/>
+                            <img src={uno} alt="" />
                             <div className="beneficios">
                                 <h3>Asesoría</h3>
                                 <p>Ten asesorías sobre el curso directamente de nuestros instructores.</p>
                             </div>
                         </div>
                         <div className="card-beneficios">
-                            <img src={dos} alt=""/>
+                            <img src={dos} alt="" />
                             <div className="beneficios">
                                 <h3>Certificado</h3>
                                 <p>Recibirás un diploma y un pack de stickers como recompensa al terminar.</p>
@@ -175,9 +180,9 @@ class HomeContainer extends Component {
                 <section className="destacados">
                     <h2 className="subtitulos">Nuevos Cursos</h2>
                     <div className="box-destacados">
-                        <CourseCard/>
-                        <CourseCard/>
-                        <CourseCard/>
+                        <CourseCard />
+                        <CourseCard />
+                        <CourseCard />
                     </div>
                 </section>
                 <section className="testimonios">
@@ -185,7 +190,7 @@ class HomeContainer extends Component {
                     <div>
                         <Carousel afterChange={this.onChange} autoplay>
                             <div className="box-comment">
-                                <div className="photo-alumno" style={{backgroundImage:`url('${oscar}')`}}></div>
+                                <div className="photo-alumno" style={{ backgroundImage: `url('${oscar}')` }}></div>
                                 <div className="testimonio ">
                                     <span className="signo">“</span>  <p> "En Fixter aprendí a programar viniendo de un pasado totalmente distinto al desarrollo de tecnología. Desmenuzan los temas de la forma más simple para que sin importar si sabes mucho o poco, comprendas a la perfección cada uno de ellos o simplemente te actualices. Al día de hoy trabajo en esta industria que además de ser divertida, también es bien remunerada. Considero que cualquier persona puede aprender a programar y cambiar su futuro, qué mejor que sea de la mano de alguien profesional como FixterGeek." </p>
 
@@ -193,14 +198,14 @@ class HomeContainer extends Component {
                                 </div>
                             </div>
                             <div className="box-comment">
-                                <div className="photo-alumno" style={{backgroundImage:`url('${carlitos}')`}}></div>
+                                <div className="photo-alumno" style={{ backgroundImage: `url('${carlitos}')` }}></div>
                                 <div className="testimonio">
                                     <span className="signo">“</span>  <p> Tomar un FixterCamp está lejos de ser un simple curso, es un acercamiento a mundo real de la tecnología y las grandes ideas, aprendí de forma práctica y dinámica temas complejos lo cual profesionalizó mi carrera como developer y me impulso a emprender mi propio negocio.</p>
                                     <p>— Carlos Mendoza</p>
                                 </div>
                             </div>
                             <div className="box-comment">
-                                <div className="photo-alumno" style={{backgroundImage:`url('${jorge}')`}}></div>
+                                <div className="photo-alumno" style={{ backgroundImage: `url('${jorge}')` }}></div>
                                 <div className="testimonio">
                                     <span className="signo">“</span>  <p> Estudie la universidad y puedo decir que el ritmo de aprendizaje no se compara con el que Fixter te puede dar en tan solo unas semanas. Además de aprender tecnologías modernas, los profesores hacen algo más que enseñar y es que todos tienen lo que pocos programadores, calidad humana para compartir sus conocimientos.</p>
                                     <p>— Jorge García</p>
@@ -212,11 +217,11 @@ class HomeContainer extends Component {
                     </div>
                 </section>
                 <section className="newsletter">
-                    <h2 >¿Quieres mantenerte al día sobre los próximos cursos y eventos? <br/> Inscríbete a nuestro newsletter
+                    <h2 >¿Quieres mantenerte al día sobre los próximos cursos y eventos? <br /> Inscríbete a nuestro newsletter
                     </h2>
-                    <br/>
+                    <br />
                     <div>
-                        <input type="email" placeholder="contacto@fixter.org"/>
+                        <input type="email" placeholder="contacto@fixter.org" />
                         <button>Enviar</button>
                     </div>
                 </section>
@@ -225,5 +230,5 @@ class HomeContainer extends Component {
         )
     }
 }
-
-export default HomeContainer;
+function mapState() { return {} }
+export default connect(mapState, { getBootcampsAction })(HomeContainer)
