@@ -18,7 +18,7 @@ export default function BootcampCard({ title, students = 100 }) {
                 <p>Crea las bases que necesitas para convertirte en desarrollador web y comenzar tu carrera profesional. ⚛️</p>
                 <p> <FontAwesome name="user" /> {students.length} Estudiantes</p>
                 <p> <FontAwesome name="calendar" />
-                    4 semanas comienza: <strong> 21 Octubre 2019</strong>
+                    4 semanas Disponible: <strong> 21 Octubre 2019</strong>
                 </p>
                 <p> <FontAwesome name="file" /> Exámen final  </p>
                 <button className="btn-in">Inscrito</button>
