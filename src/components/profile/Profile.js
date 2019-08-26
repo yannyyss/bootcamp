@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./Profile.css"
 import { Tabs, Input } from 'antd';
 import { UserCourses } from "./UserCourses";
 import { UserBootcamp } from "./UserBootcamp";
 import { UserBooks } from "./UserBooks";
 import { UserEvents } from "./UserEvents";
+import { storage } from '../../firebase'
 
 const { TabPane } = Tabs;
 
@@ -14,8 +15,8 @@ function callback(key) {
 
 let photo = "https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/56182421_2071292546299456_5483132443244363776_o.jpg?_nc_cat=103&_nc_oc=AQlzvSvRjV3VJKeZMVeHYbvuFokkxJNTZjn-HwHRVhg69AOO1kVJMybsT04HcActbpY&_nc_ht=scontent.fmex6-1.fna&oh=551c5407a88f347d7b5088bdfdf40c5f&oe=5DAD6FFD"
 
-export const Profile = ({ bootcamps, updateProfile, displayName, photoURL = photo, country, city, email, role, }) => {
-
+export const Profile = ({ _id, bootcamps, updateProfile, displayName, photoURL = photo, country, city, email, role, }) => {
+    let input = useRef()
     let [profile, setProfile] = useState({})
 
     useEffect(() => {
@@ -26,13 +27,29 @@ export const Profile = ({ bootcamps, updateProfile, displayName, photoURL = phot
         setProfile({ ...profile, [name]: value })
     }
 
+    function uploadImage({ target: { files } }) {
+        if (!files[0]) return
+        storage.ref('profilePics').child(_id).put(files[0])
+            .then(snap => {
+                return snap.ref.getDownloadURL()
+            })
+            .then(url => {
+                setProfile({ ...profile, photoURL: url })
+            })
+    }
+
     return (
         <section className="perfil">
             <div style={{ textAlign: "center" }} className="custome">
                 <div className="user-portada">
                 </div>
                 <div className="fl">
-                    <div style={{ backgroundImage: `url("${photoURL}")` }} className="user-photo"></div>
+
+                    <div style={{ backgroundImage: `url("${profile.photoURL || photoURL}")` }} className="user-photo">
+                        <div onClick={() => input.current.click()} className="img-overlay">
+                            EDITAR IMAGEN
+                        </div>
+                    </div>
                 </div>
                 <button onClick={() => updateProfile(profile)} style={styles.button} >Actualizar Perfil</button>
                 <div className="user-descript">
@@ -41,7 +58,7 @@ export const Profile = ({ bootcamps, updateProfile, displayName, photoURL = phot
                         onChange={onChange}
                         value={profile.displayName}
                         className="user-descript-input"
-                        placeholder="Nombre para certificados"
+                        placeholder="Nombre de usuario"
                     />
                     {/* <Input
                         name="email"
@@ -73,6 +90,7 @@ export const Profile = ({ bootcamps, updateProfile, displayName, photoURL = phot
 
                 </Tabs>
             </section>
+            <input onChange={uploadImage} ref={input} hidden type="file" accept="image/*" />
         </section>
     );
 };
