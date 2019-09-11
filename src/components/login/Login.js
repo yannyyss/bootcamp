@@ -124,6 +124,7 @@ class Login extends Component {
                     visible={this.state.modal}>
                     <h3>Escribe el correo electrónico que usas para entrar a Fixter.Camp</h3>
                     <p>Te enviaremos las instrucciones para que reestablescas tu contraseña.</p>
+                    <p style={{ color: "red" }}>Si utilizas esta opción, tu contraseña anterior dejará de funcionar.</p>
                     <Form.Item>
                         <Input
                             onChange={this.storeRecoveryEmail}
