@@ -15,4 +15,6 @@ export default function () {
     store.dispatch({ type: "GET_INITIAL_DATA" })
     getBootcampsAction()(store.dispatch)
     return store
-} 
+}
+
+export let baseURL = "https://fixtercamp.herokuapp.com"

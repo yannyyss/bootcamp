@@ -5,13 +5,14 @@ import FontAwesome from "react-fontawesome";
 import { Link } from "react-router-dom";
 import queryString from 'query-string'
 import { connect } from 'react-redux'
-import { loginAction } from '../../redux/userDuck'
+import { loginAction, recoverPassword } from '../../redux/userDuck'
 import toastr from 'toastr'
 
 
 class Login extends Component {
 
     state = {
+        recoveryEmail: null,
         next: null,
         auth: {
             email: null,
@@ -32,8 +33,15 @@ class Login extends Component {
 
     }
 
+    storeRecoveryEmail = ({ target: { value } }) => {
+        this.setState({ recoveryEmail: value })
+    }
+
     sendRecoveryEmail = () => {
+        if (!this.state.recoveryEmail || !this.state.recoveryEmail.includes('@')) return
         this.setState({ modal: false })
+        this.props.recoverPassword(this.state.recoveryEmail)
+        toastr.info("Listo, revisa tu correo electrónico y sigue las instrucciones.")
     }
 
     _redirect = () => {
@@ -118,6 +126,7 @@ class Login extends Component {
                     <p>Te enviaremos las instrucciones para que reestablescas tu contraseña.</p>
                     <Form.Item>
                         <Input
+                            onChange={this.storeRecoveryEmail}
                             prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                             placeholder="Email"
                         />
@@ -132,4 +141,4 @@ function mapState({ user }) {
     return { ...user }
 }
 
-export default connect(mapState, { loginAction })(Login)
+export default connect(mapState, { loginAction, recoverPassword })(Login)

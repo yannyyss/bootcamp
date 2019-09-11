@@ -1,6 +1,7 @@
 import axios from 'axios'
+import { baseURL as url } from './store'
 
-let baseURL = "https://fixtercamp.herokuapp.com/bootcamps"
+const baseURL = url + '/bootcamps'
 
 let initial = {
     array: [],

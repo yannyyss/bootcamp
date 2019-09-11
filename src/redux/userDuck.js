@@ -1,12 +1,25 @@
 import axios from 'axios'
-
-let baseURL = "https://fixtercamp.herokuapp.com"
+import { baseURL } from './store'
 
 let initial = {
     loggedIn: false
 }
 function reducer(state = initial, action) {
     switch (action.type) {
+        case UPDATE_PASSWORD:
+            return { ...state, fetching: true }
+        case UPDATE_PASSWORD_ERROR:
+            return { ...state, fetching: false, error: action.payload }
+        case UPDATE_PASSWORD_SUCCESS:
+            return { ...state, fetching: false, ...action.payload, error: null }
+
+        case RECOVER_PASSWORD:
+            return { ...state, fetching: true }
+        case RECOVER_PASSWORD_ERROR:
+            return { ...state, error: action.payload, fetching: false }
+        case RECOVER_PASSWORD_SUCCESS:
+            return { ...state, fetching: false }
+
         case MAKE_BOOTCAMP_PURCHASE:
             return { ...state, fetching: true }
         case MAKE_BOOTCAMP_PURCHASE_ERROR:
@@ -48,6 +61,14 @@ function reducer(state = initial, action) {
 }
 
 // constants
+const UPDATE_PASSWORD = "UPDATE_PASSWORD"
+const UPDATE_PASSWORD_ERROR = "UPDATE_PASSWORD_ERROR"
+const UPDATE_PASSWORD_SUCCESS = "UPDATE_PASSWORD_SUCCESS"
+
+const RECOVER_PASSWORD = "RECOVER_PASSWORD"
+const RECOVER_PASSWORD_SUCCESS = "RECOVER_PASSWORD_SUCCESS"
+const RECOVER_PASSWORD_ERROR = "RECOVER_PASSWORD_ERROR"
+
 const MAKE_BOOTCAMP_PURCHASE = "MAKE_BOOTCAMP_PURCHASE"
 const MAKE_BOOTCAMP_PURCHASE_ERROR = "MAKE_BOOTCAMP_PURCHASE_ERROR"
 const MAKE_BOOTCAMP_PURCHASE_SUCCESS = "MAKE_BOOTCAMP_PURCHASE_SUCCESS"
@@ -68,6 +89,38 @@ const LOGOUT = "LOGOUT"
 
 
 // thunks
+export function updatePasswordAction(newPass) {
+    return (dispatch, getState) => {
+        let { user: { token } } = getState()
+        dispatch({ type: UPDATE_PASSWORD })
+        return axios.post(`${baseURL}/change-password`, { password: newPass }, { headers: { Authorization: token } })
+            .then(res => {
+                dispatch({ type: UPDATE_PASSWORD_SUCCESS, payload: { ...res.data } })
+                return res
+            })
+            .catch(err => {
+                if (!err || !err.response) return dispatch({ type: UPDATE_PASSWORD_ERROR, payload: "algo malo pasó" })
+                dispatch({ type: UPDATE_PASSWORD_ERROR, payload: err.response.data.message })
+                return err
+            })
+    }
+}
+
+export function recoverPassword(email) {
+    return dispatch => {
+        dispatch({ type: RECOVER_PASSWORD })
+        return axios.post(`${baseURL}/recovery`, { email })
+            .then(res => {
+                dispatch({ type: RECOVER_PASSWORD_SUCCESS, payload: { ...res.data } })
+                return res
+            })
+            .catch(err => {
+                dispatch({ type: RECOVER_PASSWORD_ERROR, payload: err.response.data.message })
+                return err
+            })
+    }
+}
+
 export function makeBootcampPurchaseAction({ tokenId, bootcampId }) { // {tokenId, bootcampId}
     return (dispatch, getState) => {
         let { user: { token }, bootcamps: { student } } = getState()

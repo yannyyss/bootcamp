@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./Profile.css"
 import { Profile } from "./Profile"
 import { connect } from 'react-redux'
-import { updateProfileAction } from '../../redux/userDuck'
+import { updateProfileAction, updatePasswordAction } from '../../redux/userDuck'
 import toastr from 'toastr'
 
 class ProfileContainer extends Component {
@@ -21,10 +21,19 @@ class ProfileContainer extends Component {
             })
     }
 
+    updatePassword = newPass => {
+        if (!newPass) return
+        this.props.updatePasswordAction(newPass)
+            .then(() => {
+                if (this.props.error) toastr.error(this.props.error)
+                else toastr.success("Perfil actualizado")
+            })
+    }
+
     render() {
         return (
             <div >
-                <Profile updateProfile={this.updateProfile} {...this.props.user} />
+                <Profile updatePassword={this.updatePassword} updateProfile={this.updateProfile} {...this.props.user} />
             </div>
         )
     }
@@ -39,4 +48,4 @@ function mapState({ user }) {
     }
 }
 
-export default connect(mapState, { updateProfileAction })(ProfileContainer)
+export default connect(mapState, { updateProfileAction, updatePasswordAction })(ProfileContainer)

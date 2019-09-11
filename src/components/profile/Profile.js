@@ -16,9 +16,10 @@ function callback(key) {
 //let photo = "https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/56182421_2071292546299456_5483132443244363776_o.jpg?_nc_cat=103&_nc_oc=AQlzvSvRjV3VJKeZMVeHYbvuFokkxJNTZjn-HwHRVhg69AOO1kVJMybsT04HcActbpY&_nc_ht=scontent.fmex6-1.fna&oh=551c5407a88f347d7b5088bdfdf40c5f&oe=5DAD6FFD"
 let photo = "https://media.licdn.com/dms/image/C4E0BAQGdnoI0RtTQnw/company-logo_200_200/0?e=2159024400&v=beta&t=jkaLWEXwLbkEejHmsvuQq9YD_qvbMIbYqbziiRb6NQs"
 
-export const Profile = ({ _id, bootcamps, updateProfile, displayName, photoURL = photo, country, city, email, role, }) => {
+export const Profile = ({ _id, bootcamps, updateProfile, displayName, photoURL = photo, country, city, email, changePass, updatePassword }) => {
     let input = useRef()
     let [profile, setProfile] = useState({})
+    let [newPass, setNewPass] = useState(null)
 
     useEffect(() => {
         setProfile({ displayName })
@@ -26,6 +27,10 @@ export const Profile = ({ _id, bootcamps, updateProfile, displayName, photoURL =
 
     function onChange({ target: { name, value } }) {
         setProfile({ ...profile, [name]: value })
+    }
+
+    function storeNewPass({ target: { value } }) {
+        setNewPass(value)
     }
 
     function uploadImage({ target: { files } }) {
@@ -61,6 +66,19 @@ export const Profile = ({ _id, bootcamps, updateProfile, displayName, photoURL =
                         className="user-descript-input"
                         placeholder="Nombre de usuario"
                     />
+                    {changePass && <div>
+                        <h2 style={{ color: "red" }} >Debes actualizar tu contraseña:</h2>
+                        <Input
+                            name="newPassword"
+                            onChange={storeNewPass}
+                            value={newPass}
+                            className="user-descript-input"
+                            placeholder="Debes crear un password nuevo"
+                        />
+                        <br />
+                        <br />
+                        <button onClick={() => updatePassword(newPass)} style={styles.button}> Actualizar password </button>
+                    </div>}
                     {/* <Input
                         name="email"
                         onChange={onChange}
