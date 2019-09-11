@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { baseURL } from './store'
+import { baseURL } from './baseURL'
 
 let initial = {
     loggedIn: false
@@ -207,12 +207,4 @@ export function createAccountAction(auth) {
             })
     }
 }
-
-
-
-
-
-
-
-
 export default reducer

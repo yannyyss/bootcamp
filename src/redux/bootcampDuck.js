@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { baseURL as url } from './store'
+import { baseURL as url } from './baseURL'
 
 const baseURL = url + '/bootcamps'
 
@@ -22,9 +22,9 @@ function reducer(state = initial, action) {
             return { ...state, fetching: false, array: [...action.payload.array], current: action.payload.current }
 
         case "GET_INITIAL_DATA":
-            return state
+            return { ...state }
         default:
-            return state
+            return { ...state }
     }
 }
 
@@ -60,73 +60,5 @@ export function getBootcampsAction() {
             })
     }
 }
-
-// // thunks
-// export function updateProfileAction(update) {
-//     return (dispatch, getState) => {
-//         let { user: { token } } = getState()
-//         dispatch({ type: UPDATE_PROFILE })
-//         return axios.patch(`${baseURL}/self`, update, { headers: { Authorization: token } })
-//             .then(res => {
-//                 let { user } = localStorage
-//                 if (user) user = JSON.parse(user)
-//                 localStorage.user = JSON.stringify({ ...user, ...res.data })
-//                 dispatch({ type: UPDATE_PROFILE_SUCCESS, payload: { ...res.data } })
-//                 return res
-//             })
-//             .catch(err => {
-//                 dispatch({ type: UPDATE_PROFILE_ERROR, payload: err.response.data.message })
-//                 return err
-//             })
-//     }
-// }
-
-// export function logOutAction() {
-//     return dispatch => {
-//         localStorage.removeItem('user')
-//         dispatch({ type: LOGOUT })
-//     }
-// }
-
-// export function loginAction(auth) {
-//     return dispatch => {
-//         dispatch({ type: LOGIN })
-//         return axios.post(`${baseURL}/login`, auth)
-//             .then(res => {
-//                 localStorage.user = JSON.stringify({ ...res.data.user, token: res.data.token })
-//                 dispatch({ type: LOGIN_SUCCESS, payload: { ...res.data.user, token: res.data.token } })
-//                 return res
-//             })
-//             .catch(() => {
-//                 dispatch({ type: LOGIN_ERROR, payload: "El usuario o contraseña son incorrectos" })
-//                 return
-//             })
-//     }
-// }
-
-// export function createAccountAction(auth) {
-//     return dispatch => {
-//         dispatch({ type: CREATE_ACCOUNT })
-//         return axios.post(`${baseURL}/signup`, auth)
-//             .then(res => {
-//                 localStorage.user = JSON.stringify({ ...res.data.user, token: res.data.token })
-//                 dispatch({ type: CREATE_ACCOUNT_SUCCESS, payload: { ...res.data.user, token: res.data.token } })
-//                 return res
-//             })
-//             .catch(err => {
-//                 if (!err) return
-//                 console.log(err)
-//                 dispatch({ type: CREATE_ACCOUNT_ERROR, payload: err.response.data.message })
-//                 return err
-//             })
-//     }
-// }
-
-
-
-
-
-
-
 
 export default reducer
