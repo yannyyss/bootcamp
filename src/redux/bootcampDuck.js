@@ -13,6 +13,13 @@ let initial = {
 }
 function reducer(state = initial, action) {
     switch (action.type) {
+        case UPDATE_CURRENT_WEEK:
+            return { ...state, currentWeek: { ...action.payload } }
+        case UPDATE_CURRENT_WEEK_ERROR:
+            return { ...state, fetching: false, error: action.payload }
+        case UPDATE_CURRENT_WEEK_SUCCESS:
+            return { ...state, currentWeek: { ...action.payload } }
+
         case DELETE_LEARNING_ERROR:
             return { ...state, fetching: false, error: action.payload }
         case DELETE_LEARNING_SUCCESS:
@@ -72,6 +79,11 @@ function reducer(state = initial, action) {
 }
 
 // constants
+const UPDATE_CURRENT_WEEK = "UPDATE_CURRENT_WEEK"
+const UPDATE_CURRENT_WEEK_ERROR = "UPDATE_CURRENT_WEEK_ERROR"
+const UPDATE_CURRENT_WEEK_SUCCESS = "UPDATE_CURRENT_WEEK_SUCCESS"
+
+
 const DELETE_LEARNING = "DELETE_LEARNING"
 const DELETE_LEARNING_ERROR = "DELETE_LEARNING_ERROR"
 const DELETE_LEARNING_SUCCESS = "DELETE_LEARNING_SUCCESS"
@@ -100,6 +112,28 @@ const GET_BOOTCAMPS_SUCCESS = "GET_BOOTCAMPS_SUCCESS"
 
 
 //thunks
+export function updateCurrentWeekAction(week) {
+    return (dispatch, getState) => {
+        let { user: { token } } = getState()
+        dispatch({ type: UPDATE_CURRENT_WEEK, payload: { ...week } })
+        return axios.patch(`${baseURL}/weeks/${week._id}`, week, { headers: { Authorization: token } })
+            .then(res => {
+                dispatch({
+                    type: UPDATE_CURRENT_WEEK_SUCCESS,
+                    payload: { ...res.data }
+                }) // changethis for more than 1 bootcamp at a time
+                //getWeekAdminAction(item.week)(dispatch, getState)
+                return res
+            })
+            .catch(err => {
+                if (!err.response) return dispatch({ type: UPDATE_CURRENT_WEEK_ERROR, payload: "Algo falló" })
+                dispatch({ type: UPDATE_CURRENT_WEEK_ERROR, payload: err.response.data.message })
+                return err
+            })
+    }
+
+}
+
 export function deleteLearningAction(item) {
     return (dispatch, getState) => {
         let { user: { token } } = getState()
@@ -141,7 +175,6 @@ export function saveLearningAction(item) {
                     return err
                 })
         } else {
-            console.log(item)
             return axios.post(`${baseURL}/learnings`, item, { headers: { Authorization: token } })
                 .then(res => {
                     dispatch({
