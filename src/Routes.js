@@ -12,10 +12,14 @@ import { BootcampDetail } from "./components/bootcamp/BootcampDetail";
 import Team from "./components/home/Team";
 import Politicas from "./components/home/Politicas";
 import Login from './components/login/Login';
+import AdminPage from './components/admin/AdminPage';
 
 
 export const Router = () => (
     <Switch>
+        {/* Admin */}
+        <Route path="/admin" component={AdminPage} />
+
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/courses" component={Courses} />
         <Route path="/courses/detail" component={CoursesDetail} />

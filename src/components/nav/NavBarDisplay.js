@@ -8,7 +8,7 @@ import FontAwesome from "react-fontawesome"
 export const NavBarDisplay = ({ loggedIn, logOut }) => {
     return (
         <div className="nav">
-            <Link to="/">
+            <Link to={loggedIn ? "/profile" : "/"}>
                 <img src={logo} alt="" />
             </Link>
             <div className="pestanas web">
