@@ -1,18 +1,37 @@
 import React, { useEffect, useState } from 'react'
-import { Table, Divider, Tag, Switch, Input } from 'antd';
+import { Table, Divider, Tag, Switch, Input, Modal, Select } from 'antd';
 import { connect } from 'react-redux';
-import { getUsersAction } from '../../redux/adminDuck'
+import { getUsersAction, saveUserAction } from '../../redux/adminDuck'
+import toastr from 'toastr'
 
 const { Search } = Input;
+const { Option } = Select;
 
 
-function AdminUsers({ users, fetching, getUsersAction }) {
+
+function AdminUsers({ saveUserAction, bootcamps, users, fetching, getUsersAction, error }) {
 
     let [search, setSearch] = useState('')
+    let [user, setUser] = useState({})
+    let [show, setShow] = useState(false)
 
     useEffect(() => {
         getUsersAction()
     }, [])
+    useEffect(() => {
+        if (error) toastr.error(error)
+    }, [error])
+
+    function editUser(record) {
+        let u = { ...record }
+        if (u.bootcamps) u.bootcamps = u.bootcamps.map(b => b._id)
+        setShow(true)
+        setUser(u)
+    }
+
+    function onChangeUser({ target: { name, value } }) {
+        setUser({ ...user, [name]: value })
+    }
 
     const columns = [
         {
@@ -84,7 +103,7 @@ function AdminUsers({ users, fetching, getUsersAction }) {
                 <span>
                     <Switch />
                     <Divider type="vertical" />
-                    <a>Delete</a>
+                    <a onClick={() => editUser(record)} >Edit</a>
                 </span>
             ),
         },
@@ -117,6 +136,12 @@ function AdminUsers({ users, fetching, getUsersAction }) {
         setSearch(value)
     }
 
+    function saveUser() {
+        setShow(false)
+        saveUserAction(user)
+
+    }
+
     //filters
     let regex = new RegExp(search, 'i')
     let filtered = [...users.filter(u => regex.test(u.displayName) || regex.test(u.email))]
@@ -128,16 +153,56 @@ function AdminUsers({ users, fetching, getUsersAction }) {
                 style={{ width: "100%" }}
             />
             <Table loading={fetching} columns={columns} dataSource={filtered} />
+
+            <Modal
+                visible={show}
+                onCancel={() => setShow(false)}
+                title={"Editar a " + user.displayName}
+                onOk={saveUser}
+            >
+                <Input
+                    name="displayName"
+                    value={user.displayName}
+                    onChange={onChangeUser}
+                    placeholder="Escribe un nombre"
+                />
+                <br />
+
+                <Select
+                    onChange={value => onChangeUser({ target: { name: "role", value } })}
+                    name="role"
+                    value={user.role}
+                >
+                    <Option value="ADMIN">ADMIN</Option>
+                    <Option value="GUEST">GUEST</Option>
+                    <Option value="STUDENT">STUDENT</Option>
+                </Select>
+                <br />
+                <Select
+                    mode="multiple"
+                    value={user.bootcamps}
+                    style={{ width: 320 }}
+                    onChange={value => onChangeUser({ target: { name: "bootcamps", value } })}
+                    name="bootcamps"
+                    placeholder="Selecciona un bootcamp"
+                >
+                    {bootcamps.map((b, i) => {
+                        return <Option key={i} value={b._id}>{b.title}</Option>
+                    })}
+                </Select>
+
+            </Modal>
         </div>
     )
 
 }
 
-function mapState({ admin: { users: { array }, fetching } }) {
+function mapState({ admin: { users: { array }, fetching }, bootcamps: { array: boots } }) {
     return {
         fetching,
-        users: array
+        users: array,
+        bootcamps: boots
     }
 }
 
-export default connect(mapState, { getUsersAction })(AdminUsers)
+export default connect(mapState, { saveUserAction, getUsersAction })(AdminUsers)

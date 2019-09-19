@@ -20,7 +20,7 @@ export const UserBootcamp = ({ bootcamps = [] }) => {
             </div> :
                 <div style={{ display: "flex", justifyContent: "center" }}>
                     {bootcamps.map((bootcamp, i) => (
-                        <BootcampCard key={i} {...bootcamp} />
+                        <BootcampCard bootcamp={bootcamp} key={i} {...bootcamp} />
                     ))}
                 </div>
 

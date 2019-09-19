@@ -1,20 +1,28 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Button, Modal, Input, Progress } from 'antd'
+import { Card, Button, Modal, Input, Progress, Icon, DatePicker, Switch } from 'antd'
 import { connect } from 'react-redux'
 import { setEditingBootcampAction } from '../../redux/adminDuck'
 import { getWeekAdminAction, saveLearningAction, deleteLearningAction, updateCurrentWeekAction } from '../../redux/bootcampDuck'
 import toastr from 'toastr'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import firebase from '../../firebase'
+import moment from 'moment'
+import 'moment/locale/es'
+import locale from 'antd/es/date-picker/locale/es_ES';
+const ReactMarkdown = require('react-markdown/with-html')
 
 
+const { TextArea } = Input;
 const { confirm } = Modal;
 
 function WeekEdit({ updateCurrentWeekAction, error, deleteLearningAction, saveLearningAction, week, getWeekAdminAction, match }) {
     let [editing, setEditing] = useState(false)
+    let [weekEditing, setWeekEditing] = useState(false)
     let [learning, setLearning] = useState({})
     let [video, setVideo] = useState(null)
     let [progress, setProgress] = useState(0)
+    let [weekMod, setWeekMod] = useState({})
+    let [mark, showMark] = useState(false)
 
     useEffect(() => {
         if (match.params.id) getWeekAdminAction(match.params.id)
@@ -22,7 +30,14 @@ function WeekEdit({ updateCurrentWeekAction, error, deleteLearningAction, saveLe
     useEffect(() => {
         if (error) toastr.error(error)
     }, [error])
+    useEffect(() => {
+        console.log(weekMod)
+    }, [weekMod])
     // login?
+
+    function onChangeWeek({ target: { name, value } }) {
+        setWeekMod({ ...weekMod, [name]: value })
+    }
 
     function onChange({ target: { name, value } }) {
         setLearning({ ...learning, [name]: value })
@@ -90,7 +105,10 @@ function WeekEdit({ updateCurrentWeekAction, error, deleteLearningAction, saveLe
                         >
 
                             <div>
-                                <strong>{item.description}</strong>
+                                <ReactMarkdown
+                                    source={item.description.slice(0, 100) + "..."}
+                                    escapeHtml={false}
+                                />
                             </div>
 
                         </Card ></div>)}
@@ -137,13 +155,63 @@ function WeekEdit({ updateCurrentWeekAction, error, deleteLearningAction, saveLe
 
 
     }
+
+    function editWeek(off) {
+        if (off === "off") {
+            setWeekEditing(false)
+            updateCurrentWeekAction({ ...weekMod })
+            return
+        }
+        setWeekEditing(true)
+        setWeekMod({ ...week })
+    }
+
     return (
         <div>
             <DragDropContext onDragEnd={onDragEnd}>
 
                 <div >
-                    <h1>Week {week.title}</h1>
-                    <p>{week.description}</p>
+                    {!weekEditing && <div>
+                        <h2>
+                            {week.title}
+                            <Icon onClick={editWeek} type="edit" theme="filled" />
+                        </h2>
+                        <p>{week.description}</p>
+                        <p><b>Disponible:</b> {moment(week.startDate).format('llll')}</p>
+                        <p><b>Finaliza:</b> {moment(week.endDate).format('llll')}</p>
+                    </div>}
+                    {weekEditing && <div >
+                        <Input
+                            name="title"
+                            placeholder="Títlo de la semana"
+                            onChange={onChangeWeek}
+                            value={weekMod.title}
+                        />
+                        <TextArea
+                            rows={4}
+                            name="description"
+                            placeholder="Descripción"
+                            onChange={onChangeWeek}
+                            value={weekMod.description}
+                        />
+                        Disonible a partir de:
+                        <DatePicker
+                            value={moment(weekMod.startDate)}
+                            format={"DD-MM-YYYY"} locale={locale} placeholder="Selecciona una fecha" onChange={(date) => onChangeWeek({ target: { name: "startDate", value: date.toString() } })} />
+                        Disonible hasta:
+                        <DatePicker
+                            value={moment(weekMod.endDate)}
+                            format={"DD-MM-YYYY"}
+                            locale={locale}
+                            placeholder="Selecciona una fecha"
+                            onChange={(date) => onChangeWeek({ target: { name: "endDate", value: date.toString() } })} />
+                        <br />
+                        Esta activa: <Switch checked={weekMod.active} onChange={checked => onChangeWeek({ target: { name: "active", value: checked } })} />
+                        <br />
+                        <Button onClick={() => editWeek("off")} icon="save" type="primary" />
+                        <Button onClick={() => setWeekEditing(false)} icon="close" type="secondary" />
+                    </div>}
+
                     <Button onClick={saveLearning} type="dashed">Agregar Learning</Button>
                     <br />
                     <br />
@@ -160,14 +228,17 @@ function WeekEdit({ updateCurrentWeekAction, error, deleteLearningAction, saveLe
                             </div>)}
                     </Droppable>
                     <Modal
-                        onOk={saveLearning}
+                        footer={<div>
+                            <Button style={{ float: "left" }} onClick={showDeleteConfirm} type="danger">Borrar</Button>
+                            <Button onClick={() => {
+                                setEditing(false)
+                                setLearning({})
+                                setVideo(null)
+                            }} type="dashed">Cancelar</Button>
+                            <Button onClick={saveLearning} type="primary">Ok</Button>
+                        </div>}
                         title={`Editar ${learning.title}`}
                         visible={editing}
-                        onCancel={() => {
-                            setEditing(false)
-                            setLearning({})
-                            setVideo(null)
-                        }}
                     >
                         <Input
                             name="title"
@@ -175,25 +246,40 @@ function WeekEdit({ updateCurrentWeekAction, error, deleteLearningAction, saveLe
                             value={learning.title}
                             onChange={onChange}
                         />
-                        <Input
+                        <TextArea
+                            rows={4}
                             onChange={onChange}
                             name="description"
-                            placeholder="descripción"
+                            placeholder="Markdown supported"
                             value={learning.description}
                         />
-
+                        <Button
+                            onClick={() => showMark(true)}
+                            icon="desktop">Previsualizar</Button>
                         <Input
                             onChange={uploadVideo}
                             type="file"
                         />
                         <br />
                         <br />
-                        {!video ? <Progress type="circle" percent={progress} width={100} /> :
-                            <video controls width="300" src={video}></video>}
+                        {!video || !learning.link ? <Progress type="circle" percent={progress} width={100} /> :
+                            null}
+                        <br />
                         {learning.link ?
                             <video controls width="300" src={learning.link}></video> : null}
 
-                        <Button onClick={showDeleteConfirm} type="danger">Borrar</Button>
+
+                    </Modal>
+                    <Modal
+                        style={{ minWidth: "80vw" }}
+                        footer={<Button onClick={() => showMark(false)} type="primary" >Ok</Button>}
+                        onCancel={() => showMark(false)}
+                        visible={mark}
+                    >
+                        <ReactMarkdown
+                            source={learning.description}
+                            escapeHtml={false}
+                        ></ReactMarkdown>
                     </Modal>
                 </div >
             </DragDropContext>

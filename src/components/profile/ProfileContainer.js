@@ -39,12 +39,16 @@ class ProfileContainer extends Component {
     }
 }
 
-function mapState({ user }) {
+function mapState({ user, bootcamps: { object, array } }) {
+    // Nos aseguramos que el usuario vea las actualizaciones del bootcamp sin cerrar sesion
+    let bootcamps = [...user.bootcamps]
+    if (user.bootcamps && array.length > 0) bootcamps = user.bootcamps.map(b => object[b._id])
+    user.bootcamps = bootcamps
     return {
         user,
         ...user,
         loggedIn: user.loggedIn,
-
+        bootcamps
     }
 }
 

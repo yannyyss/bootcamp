@@ -32,6 +32,10 @@ function reducer(state = initial, action) {
 }
 
 // constants
+const SAVE_USER = "SAVE_USER"
+const SAVE_USER_ERROR = "SAVE_USER_ERROR"
+const SAVE_USER_SUCCESS = "SAVE_USER_SUCCESS"
+
 const SET_EDITING_BOOTCAMP = "SET_EDITING_BOOTCAMP"
 
 const GET_USERS = "GET_USERS"
@@ -41,6 +45,24 @@ const GET_USERS_SUCCESS = "GET_USERS_SUCCESS"
 
 
 //thunks
+export function saveUserAction(user) {
+    return (dispatch, getState) => {
+        let { user: { token } } = getState()
+        dispatch({ type: SAVE_USER })
+        return axios.patch(`${baseURL}/users/${user._id}`, user, { headers: { Authorization: token } })
+            .then(res => {
+                dispatch({ type: SAVE_USER_SUCCESS, payload: { ...res.data } })
+                getUsersAction()(dispatch, getState)
+                return res
+            })
+            .catch(err => {
+                if (!err.response) return dispatch({ type: SAVE_USER_ERROR, payload: "Algo falló" })
+                if (err.response.data.message === "Token is invalid or has expired 👀") logOutAction()(dispatch)
+                dispatch({ type: SAVE_USER_ERROR, payload: err.response.data.message })
+                return err
+            })
+    }
+}
 
 export function setEditingBootcampAction(id) {
     return (dispatch) => {
