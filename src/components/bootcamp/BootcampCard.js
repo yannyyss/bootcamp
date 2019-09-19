@@ -2,10 +2,11 @@ import React from 'react'
 import FontAwesome from "react-fontawesome"
 import js from "../../assets/JavaScript-logo.png"
 import moment from 'moment'
+import { withRouter } from 'react-router-dom'
 
 
 
-export default function BootcampCard({ weeks, bootcamp, title, students = 100 }) {
+function BootcampCard({ history, weeks, bootcamp, title, students = 100, _id }) {
     let available = false
     if (weeks && weeks[0] && (moment(weeks[0].startDate) < moment(Date.now()))) {
         available = true
@@ -27,8 +28,11 @@ export default function BootcampCard({ weeks, bootcamp, title, students = 100 })
                 <p> <FontAwesome name="calendar" /> Prework Disponible:  {available && <strong style={{ color: "green" }}>{moment(weeks[0].startDate).format('ll')}</strong> || <strong> 23 Septiembre 2019</strong>}</p>
                 <p> <FontAwesome name="file" /> Exámen final: <b>11 Noviembre 2019 </b> </p>
                 <button className="btn-in">Inscrito</button>
-                {available && <button className="btn-pre">Prework ya Disponible</button>}
+                {available && <button
+                    onClick={() => history.push("/bootcamp/detail/" + _id)}
+                    className="btn-pre">Prework ya Disponible</button>}
             </div>
         </div>
     )
 }
+export default withRouter(BootcampCard)

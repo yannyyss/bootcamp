@@ -24,7 +24,7 @@ export const Router = () => (
         <Route exact path="/courses" component={Courses} />
         <Route path="/courses/detail" component={CoursesDetail} />
         <Route exact path="/bootcamp" component={Bootcamp} />
-        <Route path="/bootcamp/detail" component={BootcampDetail} />
+        <Route path="/bootcamp/detail/:id" component={BootcampDetail} />
         <Route path="/contacto" component={Contacto} />
         <Route path="/politicas-de-privacidad-fixter" component={Politicas} />
         <Route path="/fixter-team" component={Team} />
