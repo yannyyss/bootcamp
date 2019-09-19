@@ -7,7 +7,7 @@ import moment from 'moment'
 
 export default function BootcampCard({ weeks, bootcamp, title, students = 100 }) {
     let available = false
-    if (weeks[0] && (moment(weeks[0].startDate) < moment(Date.now()))) {
+    if (weeks && weeks[0] && (moment(weeks[0].startDate) < moment(Date.now()))) {
         available = true
     }
 
