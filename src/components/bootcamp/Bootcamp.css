@@ -185,10 +185,16 @@
 /*
 CARD*/
 
+.deactivated{
+    pointer-events: none;
+    background-color:lightgray;
+    color:white;
+}
 
 .card-l{
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 10px;
     height: auto;
     min-height: 120px;
     background-color: white;
@@ -295,7 +301,7 @@ CARD*/
 }
 .camp-dates{
     width: 100%;
-    height:200px;
+    min-height:200px;
     background-color: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     color:#666;
@@ -320,6 +326,18 @@ CARD*/
 
 .camp-dates div p{
     margin: 0;
+}
+
+.camp-dates-week{
+    transition:all .3s ease;
+}
+
+.camp-dates-week:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.camp-dates-week.active{
+    background-color: #ca3e47;
+    color:white;
 }
 
 .camp-banner{
@@ -452,6 +470,7 @@ CARD*/
     .card-l{
         flex-wrap: wrap;
         padding:5% ;
+        margin-bottom: 20px;
     }
     .btn-see{
         margin: 20px 0 0 0;
