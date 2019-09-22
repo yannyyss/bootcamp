@@ -33,7 +33,7 @@
 }
 .box-curso{
     display: flex;
-    height: 50px;
+    height:auto;
     align-items: center;
 }
 .author-photo{
@@ -62,7 +62,7 @@
 .price{
     background-color:#ca3e47;
     color:white;
-    width: 50px;
+    width: auto;
     position: absolute;
     right: 0;
     bottom: 0;

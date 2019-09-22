@@ -4,8 +4,8 @@ import "./Bootcamp.css"
 export const StepUno = () => {
     return (
         <div className="step">
-            <h2>Bootcamp online</h2>
-            <p>23 de Septiembre | Desarrollo Web</p>
+            <h2>Fundamentos del Desarrollo Web | Bootcamp Online</h2>
+            <p>21 de Octubre | Desarrollo Web</p>
             <p><strong>$1,000.00 MXN</strong></p>
             <br />
             <p>

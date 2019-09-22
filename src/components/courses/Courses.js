@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import "./Courses.css"
 import {CourseCard} from "../card/CourseCard";
+import siete from "../../assets/badget1.png";
+import cinco from "../../assets/badget2.png";
+import seis from "../../assets/badget-3.png";
 
 
 class Courses extends Component {
@@ -46,9 +49,15 @@ class Courses extends Component {
                 <div className="catalogo">
                     <h2 className="subtitulos">Explora todos los cursos</h2>
                     <div className="box-courses">
-                        <CourseCard/>
-                        <CourseCard/>
-                        <CourseCard/>
+                        <CourseCard image={siete} name="Empezando con Firebase Realtime Database"
+                                    lecciones="12 lecciones" tiempo="35 minutos"
+                        />
+                        <CourseCard image={cinco} name="Tu primer aplicación con Firebase"
+                                    lecciones="14 lecciones" tiempo="30 minutos"
+                        />
+                        <CourseCard image={seis} name="Estructura de Datos Complejos con Realtime DB"
+                                    lecciones="10 lecciones" tiempo="40 minutos"
+                        />
                     </div>
                 </div>
             </div>

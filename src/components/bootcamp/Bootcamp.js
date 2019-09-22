@@ -39,7 +39,7 @@ class Bootcamp extends Component {
                                 fundamentos necesarios para abordar el desarrollo de software a nivel profesional.
                             </p>
                             <br/>
-                            <p>23 de Octubre | 12:00 pm </p>
+                            <p>21 de Octubre | 12:00 pm </p>
                             <br/>
                             <Link to="/apply">
                                 <Button ico="{ }" text="Inscribirme"/>
@@ -133,9 +133,9 @@ class Bootcamp extends Component {
                             </div>
                             <div className="step-descript">
                                 <h3>Inscríbete</h3>
-                                <p>Inscríbete al bootcamp antes del día 23 de Octubre.
+                                <p>Inscríbete al bootcamp antes del día 21 de Octubre.
 
-                                    Y estudia la guía que aparecerá
+                                    Y completa el Prework aparecerá
                                     en tu perfil.
                                 </p>
                             </div>
@@ -148,7 +148,7 @@ class Bootcamp extends Component {
                             </div>
                             <div className="step-descript">
                                 <h3>Aprende</h3>
-                                <p>Termina cada lección en video y sube tus tareas. Deebes completar cada módulo dentro de la semana correspondiente.</p>
+                                <p>Termina cada lección en video y sube tus tareas. Debes completar cada módulo dentro de la semana correspondiente.</p>
                             </div>
                         </div>
                         <div className="steps">
@@ -180,7 +180,7 @@ class Bootcamp extends Component {
                 <div className="invite">
                     <h2 className="subtitulos" style={{marginBottom:"20px"}}>¿Quieres completar tu aprendizaje?</h2>
 
-                    <p>Explora nuestro catálogo de cursos en línea, y aprende a utilziar las herramientas más utilziadas del
+                    <p>Explora nuestro catálogo de cursos en línea, y aprende a usar las herramientas más utilziadas del
                         desarrollo.</p>
                     <p>
                         Encuentra cursos actualizados y concretos de las tecnologías más populares para el desarrollo de aplicaciones
@@ -189,7 +189,9 @@ class Bootcamp extends Component {
 
                     </p>
                     <br/>
+                    <Link to="/courses">
                     <ButtonWhite ico="#" text="EXPLORAR"/>
+                    </Link>
                 </div>
             </section>
         )

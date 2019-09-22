@@ -22,7 +22,7 @@
     opacity: .2;
     border: none;
 }
-.nav img{
+.logo{
     height: 60px;
 }
 .pestanas{
@@ -103,6 +103,16 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.avatar{
+    width: 54px;
+    height: 54px;
+    margin-left: 12px;
+}
+#user-drop{
+    top: 54px;
+    right: 0px;
+}
+
 @media(max-width: 555px){
     .web{
         display: none;

@@ -11,6 +11,9 @@ import { Link } from "react-router-dom";
 import oscar from "../../assets/ossscar.jpg"
 import carlitos from "../../assets/carlitos.jpg"
 import jorge from "../../assets/jorge.jpg"
+import siete from "../../assets/badget1.png"
+import cinco from "../../assets/badget2.png"
+import seis from "../../assets/badget-3.png"
 // redux
 import { connect } from 'react-redux'
 import { getBootcampsAction } from '../../redux/bootcampDuck'
@@ -180,9 +183,15 @@ class HomeContainer extends Component {
                 <section className="destacados">
                     <h2 className="subtitulos">Nuevos Cursos</h2>
                     <div className="box-destacados">
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
+                        <CourseCard image={siete} name="Empezando con Firebase Realtime Database"
+                        lecciones="12 lecciones" tiempo="35 minutos"
+                        />
+                        <CourseCard image={cinco} name="Tu primer aplicación con Firebase"
+                                    lecciones="14 lecciones" tiempo="30 minutos"
+                        />
+                        <CourseCard image={seis} name="Estructura de Datos Complejos con Realtime DB"
+                                    lecciones="10 lecciones" tiempo="40 minutos"
+                        />
                     </div>
                 </section>
                 <section className="testimonios">
