@@ -74,14 +74,14 @@ const BD = ({ subscribed, match, bootcamp = { students: 0, weeks: [{ learnings: 
                                 al terminar la semana.
                             </p>
                             <div className="box-lessons">
-                                {bootcamp.weeks[activeWeek].learnings.map(learning => {
+                                {/*bootcamp.weeks[activeWeek].learnings.map(learning => {
                                     return <CardLessons
                                         week={`Semana ${activeWeek}`}
                                         date="21 al 27 de Octubre 2019"
                                         name={learning.title}
                                         descript="Prework" />
 
-                                })}
+                                })*/}
 
                             </div>
                         </div>
